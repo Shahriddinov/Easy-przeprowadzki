@@ -1,0 +1,173 @@
+@import "../../assets/style/global";
+
+.package {
+  margin-top: 100px;
+
+  &_descip {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &_col-33 {
+    margin-top: 100px;
+    width: 32%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 40px -5px rgba(0, 0, 0, 0.15);
+    padding: 2.5em 2em 2em 2em;
+    position: relative;
+
+    &_popul {
+      position: absolute;
+      left: 38%;
+      right: 38%;
+      top: -13px;
+      background-color: $accent-color;
+      font-size: clamp(0.6875rem, 0.6386rem + 0.2174vw, 0.8125rem);
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $fff-color;
+      padding: 7px 15px 7px 15px;
+      border-radius: 5px 5px 5px 5px;
+    }
+
+    &:nth-child(2) {
+      background-color: #B8D2E7;
+
+    }
+
+    &_packing {
+      text-align: center;
+      color: #101518;
+      font-size: clamp(1.375rem, 1.1916rem + 0.8152vw, 1.84375rem);
+      font-weight: 700;
+      line-height: 1.3em;
+      margin-bottom: 15px;
+    }
+
+    &_infoss {
+      color: #56626C;
+      font-size: clamp(0.75rem, 0.7011rem + 0.2174vw, 0.875rem);
+      line-height: 1.6em;
+      text-align: center;
+    }
+
+    &_dollar {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+
+      &_IconD {
+        text-align: center;
+        font-size: clamp(1.15625rem, 1.0462rem + 0.4891vw, 1.4375rem);
+        font-weight: 700;
+        line-height: 1.3em;
+        color: $accent-color;
+      }
+
+
+      &_dprice {
+        font-size: clamp(2.375rem, 1.8125rem + 2.5vw, 3.8125rem);
+        font-weight: 800;
+        text-transform: capitalize;
+        line-height: 1.1em;
+        color: $accent-color;
+
+      }
+
+      .pp {
+        color: #214562 !important;
+      }
+
+    }
+
+    .pp {
+      color: #214562 !important;
+    }
+
+    .dd {
+      color: #101518 !important;
+    }
+
+
+    &_month {
+      text-align: center;
+      font-size: clamp(0.8125rem, 0.7636rem + 0.2174vw, 0.9375rem);
+      font-weight: 600;
+      text-transform: capitalize;
+      line-height: 1.4em;
+      color: #56626C;
+    }
+
+    &_liCheck {
+      font-size: clamp(0.875rem, 0.8261rem + 0.2174vw, 1rem);
+      line-height: 1.5em;
+      color: #56626C;
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: calc(20px / 2);
+      position: relative;
+
+      &:last-child {
+        margin-bottom: 40px;
+      }
+
+      &_fache {
+        color: $accent-color;
+      }
+
+      &:after {
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        content: "";
+        border-color: #DDDDDD;
+        border-top-style: dashed;
+        border-top-width: 1px;
+      }
+    }
+
+    &_gets {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #FFFFFF00;
+      fill: #101518;
+      color: #101518;
+      border-style: solid;
+      border-width: 2px;
+      border-color: #4ECB71;
+      font-size: clamp(0.6875rem, 0.6386rem + 0.2174vw, 0.8125rem);
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 1.4em;
+      border-radius: 5px;
+      padding: 15px 30px;
+      margin-top: 20px;
+      position: relative;
+      transition: 0.5s;
+
+
+      &:hover {
+        background-color: $accent-color;
+        color: #fff;
+        transition: 0.5s;
+      }
+    }
+
+    .bbb {
+      background: $accent-color !important;
+      color: #fff !important;
+      transition: 0.5s;
+
+      &:hover {
+        background: #2D984B !important;
+        transition: 0.5s;
+      }
+    }
+  }
+}

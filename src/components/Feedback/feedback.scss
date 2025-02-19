@@ -1,0 +1,96 @@
+@import "../../assets/style/global";
+
+.feedback {
+  background: #F6F6F6;
+  &_fdes {
+    width: 60%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &_slider {
+    width: 33%;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #F6F6F6;
+    border-radius: 7px;
+    padding: 35px 35px 30px 35px;
+    box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.15);
+    background-color: #FFFFFF;
+
+
+    &_star {
+      gap: 5px;
+      color: $accent-color;
+    }
+
+    &_Fdes {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    &_namesF {
+      color: $secondary-color;
+      font-size: clamp(1rem, 0.9511rem + 0.2174vw, 1.125rem);
+      font-weight: 700;
+      line-height: 1.4em;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+  &_why{
+    background-image: url("../../assets/images/BG2.jpg");
+    background-position: 50% 25%;
+    margin-top: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #214562;
+      opacity: 0.5; // Overlay ko‘rinishi uchun
+      z-index: 1; // Background rasmdan yuqorida bo‘lishi uchun
+    }
+    &_Wbox{
+      width: 45%;
+    .colo{
+      position: relative;
+      z-index: 2;
+      color: #FFFFFF;
+    }
+      .discover{
+        background: $accent-color;
+        font-size: clamp(0.6875rem, 0.6386rem + 0.2174vw, 0.8125rem);
+        font-weight: 600;
+        position: relative;
+        z-index: 2;
+        text-transform: uppercase;
+        line-height: 1.4em;
+        color: $fff-color;
+        border-radius: 5px 5px 5px 5px;
+        border: none;
+        padding: 20px 40px;
+        display: inline-flex;
+        align-items: center;
+        transition: .5s;
+        gap: 10px;
+        margin-top: 20px;
+        &:hover{
+          background: #2D984B;
+          transition: .5s;
+
+        }
+      }
+    }
+  }
+}
