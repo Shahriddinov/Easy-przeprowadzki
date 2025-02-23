@@ -5,8 +5,16 @@ import ScrollTop from "./hoc/ScrollTop";
 import Layout from "./components/Layout/Layout";
 
 const Home = lazy(() => import("./pages/Home/Home"));
+const About = lazy(() => import("./pages/AboutUs/aboutUs"));
+const Service = lazy(() => import("./pages/Service/Service"));
+const Price = lazy(() => import("./pages/Price/Price"));
+const Contact = lazy(() => import("./pages/ContactUs/ContactUs"));
 const routes = [
     {path: "/", element: Home},
+    {path: "/about", element: About},
+    {path: "/services", element: Service},
+    {path: "/price", element: Price},
+    {path: "/contact", element: Contact},
 
 ];
 const RoutesContainer = () => (

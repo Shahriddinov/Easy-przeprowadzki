@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import {Autoplay, Navigation} from "swiper/modules";
 import {FaStar} from "react-icons/fa";
 import {IoIosArrowForward} from "react-icons/io";
+import Needs from "./Needs/Needs";
 
 const Feedback = () => {
     return (
@@ -153,20 +154,7 @@ const Feedback = () => {
                     </Swiper>
                 </div>
             </div>
-            <div className="feedback_why">
-                <div className="container">
-                    <div className="feedback_why_Wbox">
-                        <div className="bigTitle colo">
-                            We will take care of all your moving needs from A to Z!
-                        </div>
-                        <p className="colo">Magnis diam montes vehicula non habitant parturient sed. Nullam fermentum
-                            velit cursus tempor leo litora augue nec. Laoreet est sem cursus libero semper sed nulla
-                            purus ut habitant potenti.</p>
-                        <button className="discover">Discover More </button>
-
-                    </div>
-                </div>
-            </div>
+           <Needs/>
         </div>
     );
 };

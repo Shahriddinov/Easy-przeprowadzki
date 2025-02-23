@@ -1,0 +1,205 @@
+@import "../style/global";
+
+.footer {
+  margin-top: 100px;
+  position: relative;
+  width: 100%;
+  padding-top: 125px;
+
+  &_havePlan {
+    width: 100%;
+    position: absolute;
+    top: 0;
+
+    &_hbox {
+      border-radius: 10px;
+      box-shadow: 0px 10px 40px -5px rgba(0, 0, 0, 0.25);
+      z-index: 3;
+      background: #B8D2E7;
+
+      &_col-8 {
+        width: 65%;
+        padding: 2em;
+
+        &_urlSend {
+          background: $accent-color;
+          font-size: clamp(0.6875rem, 0.6386rem + 0.2174vw, 0.8125rem);
+          font-weight: 600;
+          text-transform: uppercase;
+          line-height: 1.4em;
+          color: $fff-color;
+          border-radius: 5px;
+          border: none;
+          margin-top: 15px;
+          padding: 12px 24px;
+          display: inline-flex;
+          align-items: center;
+          transition: .5s;
+          gap: 10px;
+
+          &:hover {
+            background: #2D984B;
+            transition: .5s;
+
+          }
+        }
+      }
+
+      &_col-5 {
+        width: 35%;
+        margin: -4em 0em 0em 0em;
+        margin-block-end: -4px;
+
+        &_fImg {
+          width: 100%;
+          height: 325px;
+          object-fit: cover;
+          object-position: top center;
+
+        }
+      }
+    }
+  }
+
+  &_Fcard {
+    width: 100%;
+    height: auto;
+    z-index: 4;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, $primary-color 30%, $secondary-color 100%);
+
+    .padd {
+      display: flex;
+      padding-top: 200px;
+      padding-bottom: 100px;
+    }
+
+    &_cols-4 {
+      width: 40%;
+      &_log {
+        width: 120px;
+        margin-bottom: 20px;
+      }
+
+      &_calls {
+        width: 100%;
+        display: flex;
+        gap: 15px;
+
+        &_callIcon {
+          height: 44px;
+          width: 44px;
+          background-color: #F6F6F6;
+          color: $accent-color;
+          fill: $accent-color;
+          font-size: 25px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          //padding: .5em;
+        }
+
+        &_callText {
+          display: flex;
+          flex-direction: column;
+
+          &_ct {
+            font-size: clamp(0.6875rem, 0.6386rem + 0.2174vw, 0.8125rem);
+            font-weight: 500;
+            color: #DDDDDD;
+          }
+
+          &_bt {
+            color: #F6F6F6;
+            font-size: clamp(1.15625rem, 1.0462rem + 0.4891vw, 1.4375rem);
+            line-height: 1.3em;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+          }
+        }
+      }
+    }
+
+    &_cols-2 {
+      width: 20%;
+      &_fserves{
+        font-size: clamp(1rem, 0.9511rem + 0.2174vw, 1.125rem);
+        font-weight: 700;
+        line-height: 1.4em;
+        color: $accent-color;
+        margin-bottom: 20px;
+        padding-left: 12px;
+
+      }
+      &_servesLink{
+        font-size: clamp(0.875rem, 0.8261rem + 0.2174vw, 1rem);
+        font-weight: 500;
+        color: $fff-color;
+        line-height: 1.5em;
+        display: flex;
+        padding-bottom: 15px;
+        align-items: center;
+        &_iconRight{
+          width: 15px;
+          height: 15px;
+          display: flex;
+          align-items: center;
+
+          .airight{
+            color:$accent-color;
+            font-size: 12px;
+            display: none;
+            transition: 0.5s;
+
+          }
+        }
+        &:hover{
+          .airight{
+            display: flex;
+            transition: 0.5s;
+          }
+
+        }
+      }
+    }
+    &_bline{
+      width: 100%;
+      color: #FFFFFF20;
+      padding-bottom: 1em;
+    }
+    &_bcol-6{
+      margin-top: 50px;
+      padding-bottom: 20px;
+      width: 50%;
+      &_police{
+        font-size: clamp(0.6875rem, 0.6386rem + 0.2174vw, 0.8125rem);
+        font-weight: 400;
+        color: $fff-color;
+        &::after{
+          content: "";
+          height: 50%;
+          border-color: #FFFFFF7A;
+          border-left-width: 1px;
+          border-left-style: solid;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+          &:nth-child(2){
+            &::after{
+              border-left-width: 0;
+            }
+          } &:last-child{
+            &::after{
+              border-left-width: 0;
+            }
+          }
+      }
+
+      .end {
+        display: flex;
+        justify-content: end;
+      }
+    }
+  }
+}

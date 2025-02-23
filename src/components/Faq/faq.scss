@@ -1,0 +1,74 @@
+@import "../../assets/style/global";
+.faq{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  &_col-2{
+    width: 35%;
+    &_chatOur{
+      width: 100%;
+      height: 260px;
+      border-radius: 15px;
+      background-image: url("../../assets/images/about.jpg");
+      background-position: 50% 15%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: 20px;
+      position: relative;
+      opacity: 1; // Biroz tiniqlikni oshirish
+      z-index: 3;
+      padding: 35px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        border-radius: 15px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-image: linear-gradient(180deg, #214562 0%, #21456280 0%);
+      }
+      &_live{
+        font-size: clamp(1.15625rem, 1.0462rem + 0.4891vw, 1.4375rem);
+        font-weight: 700;
+        line-height: 1.3em;
+        color: $fff-color;
+        position: relative;
+        z-index: 3;
+      }
+      &_chatDes{
+        position: relative;
+        z-index: 3;
+        color: $fff-color;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      &_onlineChat{
+        background: $accent-color;
+        font-size: clamp(0.6875rem, 0.6386rem + 0.2174vw, 0.8125rem);
+        font-weight: 600;
+        position: relative;
+        z-index: 2;
+        text-transform: uppercase;
+        line-height: 1.4em;
+        color: $fff-color;
+        border-radius: 5px 5px 5px 5px;
+        border: none;
+        padding: 10px 20px;
+        display: inline-flex;
+        align-items: center;
+        transition: .5s;
+        gap: 10px;
+        margin-top: 20px;
+        &:hover{
+          background: #2D984B;
+          transition: .5s;
+
+        }
+      }
+    }
+  }
+  &_col-10{
+    width: 60%;
+  }
+}

@@ -1,9 +1,10 @@
 import React, {useEffect} from 'react';
 import { FaPhoneAlt, FaMapMarkedAlt  } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
-import logo from "../../../assets/images/Logo_EazeMove_3.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import logo from "../../../assets/images/1.png";
+import {Link} from "react-router";
 function Header(props) {
     useEffect(() => {
         AOS.init({
@@ -50,11 +51,21 @@ function Header(props) {
                         </div>
                         <div className="header_navbar_nav_list-10">
                             <ul className="header_navbar_nav_list-10_menu">
-                                <li className="header_navbar_nav_list-10_menu_items">Home</li>
-                                <li className="header_navbar_nav_list-10_menu_items">About Us</li>
-                                <li className="header_navbar_nav_list-10_menu_items">Services</li>
-                                <li className="header_navbar_nav_list-10_menu_items">Price</li>
-                                <li className="header_navbar_nav_list-10_menu_items">Contact</li>
+                                <li className="header_navbar_nav_list-10_menu_items">
+                                    <Link to="/">Home</Link>
+                                </li>
+                                <li className="header_navbar_nav_list-10_menu_items">
+                                    <Link to="/about">About</Link>
+                                </li>
+                                <li className="header_navbar_nav_list-10_menu_items">
+                                    <Link to="/services">Services</Link>
+                                </li>
+                                <li className="header_navbar_nav_list-10_menu_items">
+                                    <Link to="/price">Price</Link>
+                                </li>
+                                <li className="header_navbar_nav_list-10_menu_items">
+                                    <Link to="contact">Contact</Link>
+                                </li>
                             </ul>
                         </div>
                     </div>
