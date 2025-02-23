@@ -1,25 +1,31 @@
 import React from "react";
 import "./style.scss";
+import {motion} from "framer-motion";
 const Spinner = () => {
 
     return (
         <div className="loading-page">
-            <div className="preloader">
-                <div className="waviy" style={{alignItems: "center", display:"flex", justifyContent:"center"}}>
-                     <span className="hrefs">T</span>
-                     <span className="hrefs">E</span>
-                     <span className="hrefs">C</span>
-                     <span className="hrefs">H</span>
-                </div>
-                <div className="waviy">
-                <span className="hrefs">M</span>
-                    <span className="hrefs">A</span>
-                    <span className="hrefs">S</span>
-                    <span className="hrefs">T</span>
-                    <span className="hrefs">E</span>
-                    <span className="hrefs">R</span>
-                </div>
-            </div>
+            <motion.div
+                className="loading-circle"
+                animate={{
+                    scale: [1, 1.5, 1],
+                    rotate: [0, 360, 720],
+                    borderRadius: ["20%", "50%", "20%"],
+                }}
+                transition={{
+                    duration: 2,
+                    ease: "easeInOut",
+                    repeat: Infinity,
+                    repeatType: "mirror",
+                }}
+            />
+            <motion.h2
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{duration: 1.5, repeat: Infinity, repeatType: "reverse"}}
+            >
+                Loading...
+            </motion.h2>
         </div>
     );
 };

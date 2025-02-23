@@ -45,19 +45,19 @@ const WeAre = () => {
                             molestie. Maximus lacinia libero laoreet neque porttitor sociosqu cubilia. Mauris ex luctus
                             vehicula lacinia facilisi accumsan.</p>
 
-                        <ul className="weAre_col-6_elItem">
+                        <ul className="weAre_col-6_elItem" data-aos="fade-left">
                             <li className="weAre_col-6_elItem_iconList">
                                 <IoCheckbox className="weAre_col-6_elItem_iconList_check"/>
                                 <span>Dedicated and Professional Mover</span>
                             </li>
                         </ul>
-                        <ul className="weAre_col-6_elItem">
+                        <ul className="weAre_col-6_elItem" data-aos="fade-left">
                             <li className="weAre_col-6_elItem_iconList">
                                 <IoCheckbox className="weAre_col-6_elItem_iconList_check"/>
                                 <span>One of 10 Best Moving Service Companies</span>
                             </li>
                         </ul>
-                        <ul className="weAre_col-6_elItem">
+                        <ul className="weAre_col-6_elItem" data-aos="fade-left">
                             <li className="weAre_col-6_elItem_iconList">
                                 <IoCheckbox className="weAre_col-6_elItem_iconList_check"/>
                                 <span>Bringing solutions to moving problems</span>
