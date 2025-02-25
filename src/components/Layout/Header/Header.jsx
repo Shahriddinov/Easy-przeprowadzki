@@ -5,7 +5,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import logo from "../../../assets/images/1.png";
 import {Link} from "react-router";
+import Language from "../../Language/language";
+import {useTranslation} from "react-i18next";
 function Header(props) {
+    const { t } = useTranslation();
+
     useEffect(() => {
         AOS.init({
             duration: 1500, // Animatsiya davomiyligi (ms)
@@ -22,10 +26,10 @@ function Header(props) {
                     <div className="header_head_linkContact_col-10">
                         <div className="header_head_linkContact_col-10_widget">
                             <ul className="header_head_linkContact_col-10_widget_item">
-                                <li className="header_head_linkContact_col-10_widget_item_list">
+                                <a href="tel:+998901234567" className="header_head_linkContact_col-10_widget_item_list">
                                     <FaPhoneAlt className="header_head_linkContact_col-10_widget_item_list_icons" />
                                     <span className="header_head_linkContact_col-10_widget_item_list_text">+998 90 123 45 67</span>
-                                </li>
+                                </a>
                                 <li className="header_head_linkContact_col-10_widget_item_list">
                                     <IoLocation className="header_head_linkContact_col-10_widget_item_list_icons"/>
                                     <span className="header_head_linkContact_col-10_widget_item_list_text">789 Oak St, Smalltown, TX 23456, US</span>
@@ -37,7 +41,7 @@ function Header(props) {
                         <a href="#" className="header_head_linkContact_col-2_locationButton">
                             <span className="header_head_linkContact_col-2_locationButton_lIcon">
                                 <FaMapMarkedAlt />
-                                <span>Find Coverage</span>
+                                <span>{t("find")}</span>
                             </span>
                         </a>
                     </div>
@@ -52,19 +56,22 @@ function Header(props) {
                         <div className="header_navbar_nav_list-10">
                             <ul className="header_navbar_nav_list-10_menu">
                                 <li className="header_navbar_nav_list-10_menu_items">
-                                    <Link to="/">Home</Link>
+                                    <Link to="/">{t("main")}</Link>
                                 </li>
                                 <li className="header_navbar_nav_list-10_menu_items">
-                                    <Link to="/about">About</Link>
+                                    <Link to="/about">{t("about")}</Link>
                                 </li>
                                 <li className="header_navbar_nav_list-10_menu_items">
-                                    <Link to="/services">Services</Link>
+                                    <Link to="/services">{t("services")}</Link>
                                 </li>
                                 <li className="header_navbar_nav_list-10_menu_items">
-                                    <Link to="/price">Price</Link>
+                                    <Link to="/price">{t("price")}</Link>
                                 </li>
                                 <li className="header_navbar_nav_list-10_menu_items">
-                                    <Link to="contact">Contact</Link>
+                                    <Link to="contact">{t("contact")}</Link>
+                                </li>
+                                <li className="header_navbar_nav_list-10_menu_items">
+                                    <Language/>
                                 </li>
                             </ul>
                         </div>

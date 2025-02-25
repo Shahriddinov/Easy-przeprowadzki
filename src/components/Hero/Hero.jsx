@@ -13,7 +13,10 @@ import hero4 from "../../assets/images/hero4.jpg"
 import {Navigation, Autoplay} from "swiper/modules";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import {useTranslation} from "react-i18next";
 const Hero = () => {
+    const { t } = useTranslation();
+
     useEffect(() => {
         AOS.init({
             duration: 1000, // Animatsiya davomiyligi (ms)
@@ -26,10 +29,10 @@ const Hero = () => {
     return (
         <div className="hero">
             <div className="hero_desc">
-                <h1 className="hero_desc_title" data-aos="fade-up">We take the stress out of moving</h1>
+                <h1 className="hero_desc_title" data-aos="fade-up">{t("weTake")}</h1>
                 <p className="hero_desc_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
                     luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                <button className="hero_desc_sends">Discover More <IoIosArrowForward style={{width:"13px", height:"13px"}} /></button>
+                <button className="hero_desc_sends">{t("discover")}<IoIosArrowForward style={{width:"13px", height:"13px"}} /></button>
             </div>
             <Swiper
                 modules={[Navigation, Autoplay]}
