@@ -5,6 +5,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.0",
     "aos": "^2.3.4",
+    "axios": "^1.7.9",
     "cra-template": "1.2.0",
     "framer-motion": "^12.4.7",
     "i18next": "^24.2.2",
