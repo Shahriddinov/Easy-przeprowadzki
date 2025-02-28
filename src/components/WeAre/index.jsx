@@ -19,7 +19,7 @@ const WeAre = () => {
     return (
         <div className="weAre">
             <div className="container">
-                <div className="row">
+                <div className="row main__row">
                     <div className="weAre_col-6">
                         <div className="row">
                             <div className="weAre_col-6_imgBig" data-aos="fade-up">

@@ -1,63 +1,100 @@
 @import "../../assets/style/global";
-.weAre{
+.weAre {
   margin-top: 110px;
-  &_col-6{
+  &_col-6 {
     width: 48%;
-    &_imgBig{
+    &_imgBig {
       width: 48%;
-      .imgs{
+      .imgs {
         height: 480px;
         object-fit: cover;
         object-position: center center;
         border-radius: 5px 5px 5px 5px;
       }
-      .we2{
+      .we2 {
         width: 100%;
         height: 285px;
         object-fit: cover;
         object-position: center center;
         border-radius: 5px 5px 5px 5px;
-        &:nth-child(2){
+        &:nth-child(2) {
           height: auto;
           margin-top: 20px;
         }
       }
     }
 
-
-    &_elementor{
+    &_elementor {
       padding: 0px 0px 0px 20px;
       border-style: solid;
       border-width: 0px 0px 0px 3px;
       border-color: $accent-color;
       margin-bottom: 15px;
-      &_littileText{
-        font-size:clamp(1rem, 0.9022rem + 0.4348vw, 1.25rem);
+      &_littileText {
+        font-size: clamp(1rem, 0.9022rem + 0.4348vw, 1.25rem);
         font-weight: 400;
         line-height: 1.4em;
       }
     }
-    &_ps{
+    &_ps {
       margin-block-start: 0;
-      margin-block-end: .9rem;
+      margin-block-end: 0.9rem;
     }
-    &_elItem{
-      &_iconList{
+    &_elItem {
+      &_iconList {
         padding-bottom: calc(25px / 1);
         display: flex;
         gap: 5px;
         align-items: center;
-        &_check{
+        &_check {
           font-size: 20px;
           color: $accent-color;
           width: 1.25em;
         }
-        &::after{
+        &::after {
           border-top-style: solid;
           border-top-width: 1px;
         }
       }
+    }
+  }
 
+  @media (max-width: 1024px) {
+    margin: 2em 0;
+    .container {
+      padding: 0 2em;
+      .main__row {
+        flex-direction: column-reverse;
+      }
+    }
+    &_col-6 {
+      width: 100%;
+      .row {
+        gap: 24px;
+      }
+      &_imgBig {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    margin: 0;
+    .container {
+      padding: 2em 1.5em;
+    }
+    &_col-6 {
+      &_imgBig {
+        .we2 {
+          height: 158px;
+        }
+        .we2:nth-child(2) {
+          height: 90px;
+          margin-top: 10px;
+        }
+        .imgs {
+          height: 260px;
+        }
+      }
     }
   }
 }

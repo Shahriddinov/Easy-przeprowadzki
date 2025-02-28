@@ -1,31 +1,29 @@
 @import "../../assets/style/global";
-.aboutUs{
-  &_coll-6{
+.aboutUs {
+  &_coll-6 {
     width: 50%;
-    &_descove{
+    &_descove {
       margin-top: 25px;
-        background: $accent-color;
-        font-size: clamp(0.6875rem, 0.6386rem + 0.2174vw, 0.8125rem);
-        font-weight: 600;
-        text-transform: uppercase;
-        line-height: 1.4em;
-        color: $fff-color;
-        border-radius: 5px 5px 5px 5px;
-        border: none;
-        padding: 14px 24px;
-        display: inline-flex;
-        align-items: center;
-        transition: .5s;
-        gap: 10px;
-        &:hover{
-          background: #2D984B;
-          transition: .5s;
-
-        }
-
+      background: $accent-color;
+      font-size: clamp(0.6875rem, 0.6386rem + 0.2174vw, 0.8125rem);
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 1.4em;
+      color: $fff-color;
+      border-radius: 5px 5px 5px 5px;
+      border: none;
+      padding: 14px 24px;
+      display: inline-flex;
+      align-items: center;
+      transition: 0.5s;
+      gap: 10px;
+      &:hover {
+        background: #2d984b;
+        transition: 0.5s;
+      }
     }
-    &_widgetContainer{
-      background-color:$fff-color;
+    &_widgetContainer {
+      background-color: $fff-color;
       padding: 20px 25px 20px 25px;
       border-style: solid;
       border-width: 0px 0px 0px 5px;
@@ -33,15 +31,38 @@
       border-radius: 5px;
       box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
       margin-bottom: 20px;
-      &_sectionTitle{
+      &_sectionTitle {
         color: $secondary-color;
         font-size: clamp(1.15625rem, 1.0462rem + 0.4891vw, 1.4375rem);
         font-weight: 700;
         line-height: 1.3em;
         margin-bottom: 15px;
-
       }
-
+    }
+  }
+  @media (max-width: 1024px) {
+    .main__row {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .aboutUs {
+      &_coll-6 {
+        width: 100%;
+        &_descove {
+          margin: 25px 0;
+        }
+      }
+      &_coll-6:last-child {
+        display: flex;
+        gap: 0 20px;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    .aboutUs {
+      &_coll-6:last-child {
+        flex-direction: column;
+      }
     }
   }
 }

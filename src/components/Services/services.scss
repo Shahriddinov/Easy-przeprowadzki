@@ -9,11 +9,11 @@
     margin: 0 auto;
     text-align: center;
     align-items: center;
+    margin-bottom: 100px;
   }
 
   &_cards {
     width: 100%;
-    margin-top: 100px;
 
     &_col-3 {
       width: 32%;
@@ -53,13 +53,13 @@
       &_infoS {
         text-align: center;
         line-height: 1.5em;
-        color: #56626C;
+        color: #56626c;
         font-size: clamp(0.875rem, 0.8261rem + 0.2174vw, 1rem);
         margin-bottom: 22px;
       }
 
       .href {
-        background-color: #FFFFFF00;
+        background-color: #ffffff00;
         font-size: clamp(0.6875rem, 0.6386rem + 0.2174vw, 0.8125rem);
         font-weight: 600;
         text-transform: uppercase;
@@ -68,8 +68,8 @@
         display: flex;
         align-items: center;
         gap: 5px;
-        color: #2D984B;
-        fill: #2D984B;
+        color: #2d984b;
+        fill: #2d984b;
         border-style: solid;
         border-width: 0px 0px 1px 0px;
         border-color: $accent-color;
@@ -79,7 +79,7 @@
           position: absolute;
           content: "";
           border-radius: inherit;
-          transition: all .4s ease;
+          transition: all 0.4s ease;
           z-index: -1;
           top: 0;
           left: 0;
@@ -90,15 +90,54 @@
         }
       }
 
-      &:hover, {
+      &:hover {
         border-style: solid;
         border-width: 1px 1px 1px 1px;
         border-color: $accent-color;
         transition: 0.5s;
         .href {
-        color: $secondary-color;
+          color: $secondary-color;
           transition: 0.5s;
         }
+      }
+    }
+  }
+  @media (max-width: 1024px) and (min-width: 768px) {
+    padding-top: 0;
+    &_sp {
+      margin-bottom: 0.9rem;
+    }
+    &_cards {
+      display: flex;
+      gap: 16px;
+      &_col-3 {
+        width: 100%;
+      }
+      .row {
+        flex-wrap: wrap;
+        gap: 16px;
+        &:last-child {
+          margin-top: 0 !important;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    padding-top: 0;
+    .row {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .bigTitle {
+      text-align: center;
+    }
+    &_sp {
+      width: 100%;
+      margin: 0 0 1em;
+    }
+    &_cards {
+      &_col-3 {
+        width: 100%;
       }
     }
   }

@@ -1,8 +1,10 @@
 @import "../../assets/style/global";
 
 .contact {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 100px 0;
+  .container {
+    padding: 0 1em;
+  }
 
   &_col-55 {
     width: 52%;
@@ -26,7 +28,7 @@
           font-size: 35px;
           border-radius: 5px;
 
-          padding: .5em;
+          padding: 0.5em;
           fill: #fff;
           line-height: 1;
           text-align: center;
@@ -39,7 +41,7 @@
           column-gap: 10px;
           border-style: solid;
           border-width: 0px 0px 0px 1px;
-          border-color: #DDDDDD;
+          border-color: #dddddd;
           padding-left: 2em;
           text-align: left;
 
@@ -59,7 +61,7 @@
           }
         }
       }
-      &_gets{
+      &_gets {
         background-color: $fff-color;
         border: $accent-color;
         font-size: clamp(0.6875rem, 0.6386rem + 0.2174vw, 0.8125rem);
@@ -76,14 +78,13 @@
         padding: 10px 30px;
         display: inline-flex;
         align-items: center;
-        transition: .5s;
+        transition: 0.5s;
         gap: 10px;
 
         &:hover {
-          background: #2D984B;
+          background: #2d984b;
           color: $fff-color;
-          transition: .5s;
-
+          transition: 0.5s;
         }
       }
     }
@@ -119,7 +120,6 @@
         font-size: 16px;
         font-weight: 600;
         line-height: 1em;
-
       }
 
       .form-input {
@@ -168,17 +168,16 @@
       padding: 15px 30px;
       display: inline-flex;
       align-items: center;
-      transition: .5s;
+      transition: 0.5s;
       gap: 10px;
 
       &:hover {
-        background: #2D984B;
-        transition: .5s;
-
+        background: #2d984b;
+        transition: 0.5s;
       }
     }
   }
-  &_local{
+  &_local {
     margin-top: 100px;
     position: relative;
     height: 400px;
@@ -201,7 +200,7 @@
       z-index: 2;
       background-image: linear-gradient(180deg, #214562 0%, #21456280 100%);
     }
-    &_our{
+    &_our {
       text-align: center;
       position: relative;
       z-index: 3;
@@ -210,19 +209,95 @@
       color: $fff-color;
       margin-top: 20px;
       margin-bottom: 30px;
-
     }
-    &_places{
+    &_places {
       width: 100%;
       position: relative;
       z-index: 3;
-        margin-top: 20px;
+      margin-top: 20px;
       margin-bottom: 140px;
-
     }
-    &_col-33{
+    &_col-33 {
       width: 33%;
       border: 1px solid red;
+    }
+  }
+  @media (max-width: 1024px) {
+    margin: 0;
+    &_col-45,
+    &_col-55 {
+      width: 100%;
+    }
+    &_col-55 {
+      .headTitle,
+      .bigTitle,
+      p {
+        text-align: center;
+      }
+    }
+    &_col-45{
+      &_sizeDefault{
+        text-align: center;
+      }
+      p {
+        margin-bottom: 14px;
+      }
+      
+    }
+    .container {
+      padding: 4em 3em;
+      .row {
+        flex-direction: column;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .container {
+      padding: 2em 1.5em;
+      .row {
+        gap: 2em;
+      }
+    }
+    &_col-55 {
+      .headTitle,
+      .bigTitle,
+      p {
+        text-align: left;
+      }
+      .bigTitle {
+        padding: 0% 20% 0% 0%;
+      }
+      &_information {
+        flex-direction: column;
+        gap: 1em;
+        &_callIcons,
+        &_gets {
+          width: 100%;
+        }
+        &_callIcons {
+          justify-content: space-between;
+          &_callsText {
+            width: 71%;
+            padding-left: 1em;
+          }
+        }
+        &_gets {
+          justify-content: center;
+        }
+      }
+    }
+    &_col-45 {
+      padding: 20px;
+      &_sizeDefault{
+        text-align: left;
+      }
+      .form-group{
+        flex-direction: column;
+      }
+      .form-control{
+        width: 100%;
+
+      }
     }
   }
 }

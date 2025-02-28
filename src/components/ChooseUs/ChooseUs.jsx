@@ -11,7 +11,7 @@ const ChooseUs = () => {
     return (
         <div className="chooseUs">
             <div className="container">
-                <div className="row">
+                <div className="row main__row">
                     <div className="chooseUs_col-6">
                         <div className="headTitle">
                             Why Choose us

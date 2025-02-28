@@ -1,10 +1,10 @@
 @import "../../assets/style/global";
-.moveNeeds{
+.moveNeeds {
   margin-top: 100px;
   margin-bottom: 100px;
   position: relative;
 
-  &_bgc{
+  &_bgc {
     background-position: 50% 25%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,7 +12,7 @@
     padding-top: 100px;
     padding-bottom: 100px;
     background-image: url("../../assets/images/1111.jpg");
-    &::before{
+    &::before {
       content: "";
       position: absolute;
       top: 0;
@@ -23,7 +23,7 @@
       opacity: 0.5; // Overlay ko‘rinishi uchun
       z-index: 1; // Background rasmdan yuqorida bo‘lishi uchun
     }
-    &_centerTitle{
+    &_centerTitle {
       width: 50%;
       display: flex;
       margin: 0 auto;
@@ -31,9 +31,9 @@
       position: relative;
       z-index: 1;
       padding-top: 20px;
-      color: $fff-color!important;
+      color: $fff-color !important;
     }
-    &_centerText{
+    &_centerText {
       width: 50%;
       display: flex;
       margin: 0 auto;
@@ -44,7 +44,7 @@
       position: relative;
       color: $fff-color;
     }
-    &_centerSend{
+    &_centerSend {
       margin: 0 auto;
       justify-content: center;
       background: $accent-color;
@@ -60,18 +60,17 @@
       padding: 20px 40px;
       display: inline-flex;
       align-items: center;
-      transition: .5s;
+      transition: 0.5s;
       gap: 10px;
       margin-top: 20px;
-      &:hover{
-        background: #2D984B;
-        transition: .5s;
-
+      &:hover {
+        background: #2d984b;
+        transition: 0.5s;
       }
     }
-    &_downIcon{
+    &_downIcon {
       position: absolute;
-      top: -40px;
+      top: -30px;
       color: $accent-color;
       border-color: $accent-color;
       font-size: 80px;
@@ -80,6 +79,26 @@
       left: 48%;
       right: 48%;
       z-index: 2;
+    }
+  }
+  @media (max-width: 1024px) {
+    margin-top: 4em 0;
+  }
+  @media (max-width: 768px) {
+    margin: 2em 0;
+    &_bgc {
+      padding: 2.5em 3em 2em;
+      &_centerTitle, &_centerText {
+        width: 100%;
+        margin: 0;
+      }
+      &_centerSend {
+        margin: 20px 0 0; 
+        padding: 12px 24px;
+      }
+      &_downIcon {
+        left: calc(50vw - 40px);
+      }
     }
   }
 }
