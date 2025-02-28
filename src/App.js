@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Navigate, Route, Routes} from "react-router-dom
 import Spinner from "./components/Spinner/Spinner";
 import ScrollTop from "./hoc/ScrollTop";
 import Layout from "./components/Layout/Layout";
+import NotFound from "./pages/404/NotFound";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const About = lazy(() => import("./pages/AboutUs/aboutUs"));
@@ -28,8 +29,8 @@ const RoutesContainer = () => (
                             <Route key={key} path={route.path} element={<RouteComponent/>}/>
                         );
                     })}
-                    {/*<Route path="*" element={<Navigate to="/404" />} />*/}
-                    {/*<Route path="/404" element={<NotFound />} />*/}
+                    <Route path="*" element={<Navigate to="/404" />} />
+                    <Route path="/404" element={<NotFound />} />
                 </Routes>
             </Suspense>
         </Layout>

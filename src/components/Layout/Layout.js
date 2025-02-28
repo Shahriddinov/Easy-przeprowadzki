@@ -6,7 +6,6 @@ import {useLocation} from "react-router";
 
 const Layout = (props) => {
     const {children} = props;
-
     const {pathname} = useLocation();
     const [text, setText] = useState("");
     const [speaker, setSpeaker] = useState(false);
@@ -32,6 +31,7 @@ const Layout = (props) => {
             }
         });
     }, []);
+    const isNotFoundRoute = pathname === "/404"; // `/404` yo‘lini `NotFound` uchun ishlating.
 
     useEffect(() => {
         document.onmouseup = () => {
@@ -49,9 +49,15 @@ const Layout = (props) => {
     return (
         <>
             <div className={pathname === "/" ? "page-wrapper1" : "page-wrapper2"}>
-                <Header speaker={speaker} changeSpeakSwitcher={changeSpeakSwitcher}/>
+                {!isNotFoundRoute && (
+
+
+                    <Header speaker={speaker} changeSpeakSwitcher={changeSpeakSwitcher}/>
+                )}
                 <div className="page-content">{children}</div>
-                <Footer/>
+                {!isNotFoundRoute && (
+                    <Footer/>
+                )}
             </div>
         </>
     );
