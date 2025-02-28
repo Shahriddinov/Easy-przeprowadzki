@@ -14,7 +14,7 @@ const AboutUs = () => {
             <MoveNeeds/>
             <div className="aboutUs">
                 <div className="container">
-                    <div className="row">
+                    <div className="row main__row">
                         <div className="aboutUs_coll-6">
                             <div className="headTitle">What We Offer</div>
                             <div className="bigTitle">Explore Our Moving and Storage Services</div>
