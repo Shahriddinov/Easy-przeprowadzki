@@ -9,7 +9,10 @@ import "aos/dist/aos.css";
 import {useDispatch, useSelector} from "react-redux";
 import Spinner from "../Spinner";
 import {getAbout} from "../../reduxToolkit/AboutSlice";
+import {useTranslation} from "react-i18next";
+
 const WeAre = () => {
+    const {t} = useTranslation()
     const dispatch = useDispatch();
     const lan = useSelector((state) => state.language.language);
     const aboutData = useSelector((state) => state.aboutSlice.aboutData);
@@ -36,49 +39,34 @@ const WeAre = () => {
                 {aboutData.map((item, index) => (
                     <div className="row main__row" key={index}>
                         <div className="weAre_col-6">
-                                <div className="row" key={index}>
-                                    <div className="weAre_col-6_imgBig" data-aos="fade-up">
-                                        <img className="imgs" width="100%" src={item.image[0].image} alt="we are"/>
-                                    </div>
-                                    <div className="weAre_col-6_imgBig">
-                                        <img data-aos="fade-right" className="we2" src={item.image[1].image} alt=""/>
-                                        <img data-aos="fade-left" className="we2" src={item.image[2].image} alt=""/>
-                                    </div>
+                            <div className="row" key={index}>
+                                <div className="weAre_col-6_imgBig" data-aos="fade-up">
+                                    <img className="imgs" width="100%" src={item.image[0].image} alt="we are"/>
                                 </div>
+                                <div className="weAre_col-6_imgBig">
+                                    <img data-aos="fade-right" className="we2" src={item.image[1].image} alt=""/>
+                                    <img data-aos="fade-left" className="we2" src={item.image[2].image} alt=""/>
+                                </div>
+                            </div>
 
                         </div>
                         <div className="weAre_col-6">
-                            <h2 className="headTitle" data-aos="fade-left">Who we are</h2>
-                            <h3 className="bigTitle" >We promise not to leave any scratches on your nice
-                                furniture</h3>
+                            <h2 className="headTitle" data-aos="fade-left">{t("who")}</h2>
+                            <h3 className="bigTitle">{item[`title_${lan}`]}</h3>
                             <div className="weAre_col-6_elementor">
-                                <p className="weAre_col-6_elementor_littileText" data-aos="fade-up">Maximus posuere aenean gravida class
-                                    sollicitudin. Penatibus sollicitudin ligula morbi
-                                    primis libero dis eget.</p>
+                                <p className="weAre_col-6_elementor_littileText"
+                                   data-aos="fade-up">{item[`quote_${lan}`]}</p>
                             </div>
-                            <p className="weAre_col-6_ps" data-aos="fade-down">Rutrum tristique dis porttitor faucibus neque. Ante cubilia eget
-                                sagittis aenean donec
-                                molestie. Maximus lacinia libero laoreet neque porttitor sociosqu cubilia. Mauris ex luctus
-                                vehicula lacinia facilisi accumsan.</p>
+                            <p className="weAre_col-6_ps" data-aos="fade-down">{item[`content_${lan}`]}</p>
+                            {item[`benifits_${lan}`].map((item, index) => (
+                                <ul className="weAre_col-6_elItem" data-aos="fade-left" key={index}>
+                                    <li className="weAre_col-6_elItem_iconList">
+                                        <IoCheckbox className="weAre_col-6_elItem_iconList_check"/>
+                                        <span>{item}</span>
+                                    </li>
+                                </ul>
+                            ))}
 
-                            <ul className="weAre_col-6_elItem" data-aos="fade-left">
-                                <li className="weAre_col-6_elItem_iconList">
-                                    <IoCheckbox className="weAre_col-6_elItem_iconList_check"/>
-                                    <span>Dedicated and Professional Mover</span>
-                                </li>
-                            </ul>
-                            <ul className="weAre_col-6_elItem" data-aos="fade-left">
-                                <li className="weAre_col-6_elItem_iconList">
-                                    <IoCheckbox className="weAre_col-6_elItem_iconList_check"/>
-                                    <span>One of 10 Best Moving Service Companies</span>
-                                </li>
-                            </ul>
-                            <ul className="weAre_col-6_elItem" data-aos="fade-left">
-                                <li className="weAre_col-6_elItem_iconList">
-                                    <IoCheckbox className="weAre_col-6_elItem_iconList_check"/>
-                                    <span>Bringing solutions to moving problems</span>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 ))}

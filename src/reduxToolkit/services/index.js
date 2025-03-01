@@ -1,9 +1,13 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import {createAsyncThunk} from "@reduxjs/toolkit";
 import axios from "axios";
 import {GET_SERVICES} from "../../Services/api/utilis";
 
-export const getServices = createAsyncThunk("services/get", async () => {
-    return await axios.get(GET_SERVICES, {
-        
-    }).then((res) => res.data);
+export const getService = createAsyncThunk("services/get", async () => {
+    try {
+        const response = await axios.get(GET_SERVICES, {});
+        return response.data;
+    } catch (error) {
+        console.error("API Error:", error);  // API xatosi bo'lsa
+        throw error;
+    }
 });

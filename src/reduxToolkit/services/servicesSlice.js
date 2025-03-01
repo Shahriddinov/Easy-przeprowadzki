@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getServices } from "./index";
+import { getService } from "./index";
 
 const initialState = {
     loading: true,
@@ -13,14 +13,14 @@ const servicesSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(getServices.pending, (state) => {
+            .addCase(getService.pending, (state) => {
                 state.loading = true;
             })
-            .addCase(getServices.fulfilled, (state, action) => {
+            .addCase(getService.fulfilled, (state, action) => {
                 state.loading = false;
                 state.servicesData = action.payload;
             })
-            .addCase(getServices.rejected, (state, action) => {
+            .addCase(getService.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message;
             });
