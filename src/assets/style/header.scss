@@ -135,7 +135,7 @@
         &_overlay {
           height: 100% !important;
           padding-bottom: 10px;
-          display: block;
+          display: none;
           position: fixed;
           z-index: 14;
           top: 0;
@@ -205,6 +205,12 @@
           }
           .active-menu {
             left: 0;
+          }
+          .active-overlay {
+          }
+          &_overlay {
+            display: block;
+
           }
           &_menu {
             background-color: #fff;
