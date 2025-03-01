@@ -1,13 +1,12 @@
 @import "../../assets/style/global";
 .hero {
-  height: 130vh;
   overflow: hidden;
   position: relative;
   opacity: 0.9; // Biroz tiniqlikni oshirish
   z-index: 3;
   &_desc {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 4; // Eng yuqorida turishi uchun
@@ -111,6 +110,16 @@
           height: 65vh;
           object-fit: cover;
         }
+      }
+    }
+  }
+  @media (max-width: 550px) {
+    &_desc {
+      &_title {
+        font-size: 30px;
+      }
+      &_sends{
+        padding: 12px 24px;
       }
     }
   }

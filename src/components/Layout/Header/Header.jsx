@@ -11,7 +11,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 function Header(props) {
   const { t } = useTranslation();
-  const [sheet, setSheet] = React.useState(true);
+  const [sheet, setSheet] = React.useState(false);
 
   useEffect(() => {
     AOS.init({
