@@ -31,18 +31,18 @@ function Header(props) {
             <div className="header_head_linkContact_col-10_widget">
               <ul className="header_head_linkContact_col-10_widget_item">
                 <a
-                  href="tel:+998901234567"
+                  href="tel:+48509931555"
                   className="header_head_linkContact_col-10_widget_item_list"
                 >
                   <FaPhoneAlt className="header_head_linkContact_col-10_widget_item_list_icons" />
                   <span className="header_head_linkContact_col-10_widget_item_list_text">
-                    +998 90 123 45 67
+                   +48509931555
                   </span>
                 </a>
                 <li className="header_head_linkContact_col-10_widget_item_list">
                   <IoLocation className="header_head_linkContact_col-10_widget_item_list_icons" />
                   <span className="header_head_linkContact_col-10_widget_item_list_text">
-                    789 Oak St, Smalltown, TX 23456, US
+                    Komitetu Obrony Robotników 39C
                   </span>
                 </li>
               </ul>
@@ -50,7 +50,8 @@ function Header(props) {
           </div>
           <div className="header_head_linkContact_col-2">
             <a
-              href="#"
+                target="_blank"
+              href="https://maps.app.goo.gl/b4ouG7LLCKw9q4jn7"
               className="header_head_linkContact_col-2_locationButton"
             >
               <span className="header_head_linkContact_col-2_locationButton_lIcon">

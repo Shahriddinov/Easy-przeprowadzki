@@ -126,7 +126,7 @@ function Footer(props) {
                             <div className="footer_Fcard_cols-4_log">
                                 <img width="100%" src={one} alt=""/>
                             </div>
-                            <p style={{color: "#FFFFFF", marginBottom: "25px", width:"80%"}}>{t("ease")} 😊🚚
+                            <p style={{color: "#FFFFFF", marginBottom: "25px"}}>{t("ease")} 😊🚚
                             </p>
                             <div className="footer_Fcard_cols-4_calls">
                                 <div className="footer_Fcard_cols-4_calls_callIcon">
@@ -134,8 +134,8 @@ function Footer(props) {
                                 </div>
                                 <div className="footer_Fcard_cols-4_calls_callText">
                                     <span className="footer_Fcard_cols-4_calls_callText_ct">Call Center 24/7</span>
-                                    <a href="tel:+998901234567"
-                                       className="footer_Fcard_cols-4_calls_callText_bt">+90-123-45-67</a>
+                                    <a href="tel:+48509931555"
+                                       className="footer_Fcard_cols-4_calls_callText_bt">+48509931555</a>
                                 </div>
                             </div>
                         </div>
@@ -166,16 +166,16 @@ function Footer(props) {
 
                         </div>
                         <div className="footer_Fcard_cols-2">
-                            <h2 className="footer_Fcard_cols-2_fserves">Get In Touch</h2>
+                            <h2 className="footer_Fcard_cols-2_fserves">{t("getIn")}</h2>
                             <a href="#" className="footer_Fcard_cols-2_servesLink">
                                 <div className="footer_Fcard_cols-2_servesLink_iconRight">
 
                                 </div>
-                                789 Oak St, Smalltown United State 23456
+                                Komitetu Obrony Robotników 39C
                             </a>
-                            <a href="tel:+998901234567" className="footer_Fcard_cols-2_servesLink">
+                            <a href="tel:+48509931555" className="footer_Fcard_cols-2_servesLink">
                                 <div className="footer_Fcard_cols-2_servesLink_iconRight"></div>
-                                +998-90-123-45-67
+                                +48509931555
                             </a>
                             <a href="mailto:hello@yourdomain.com" className="footer_Fcard_cols-2_servesLink">
                                 <div className="footer_Fcard_cols-2_servesLink_iconRight"></div>
