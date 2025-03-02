@@ -10,7 +10,7 @@ import Spinner from "../Spinner";
 import {getService} from "../../reduxToolkit/services";
 
 const Services = () => {
-    const {t} = useTranslation()
+    const {t} = useTranslation();
     const dispatch = useDispatch();
     const lan = useSelector((state) => state.language.language);
     const loading = useSelector((state) => state.servicesSlice.loading);
@@ -35,13 +35,11 @@ const Services = () => {
     return (
         <div className="services">
             <div className="container">
-                <div className="headTitle d-flex">Our Services</div>
+                <div className="headTitle d-flex">{t("ourServes")}</div>
                 <div className=" d-flex bigTitle">
-                    Moving Services For Every Need
+                    {t("moveServes")}
                 </div>
-                <p className="d-flex services_sp">Gravida elit class natoque nisi etiam consectetuer eget dui
-                    consectetur. Molestie sit imperdiet
-                    congue euismod senectus eleifend sociosqu turpis.</p>
+                <p className="d-flex services_sp">{t("servesDes")}</p>
 
                 <div className="services_cards">
                     <div className="row" style={{flexWrap:"wrap"}}>

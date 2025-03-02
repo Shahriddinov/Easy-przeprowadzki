@@ -4,8 +4,11 @@ import footerImg from "../../../assets/images/Footer.png";
 import one from "../../../assets/images/1.png";
 import {BiSupport} from "react-icons/bi";
 import {AiFillCaretRight} from "react-icons/ai";
+import {useTranslation} from "react-i18next";
 
 function Footer(props) {
+    const {t} = useTranslation();
+
     return (
         <div className="footer">
             <div className="footer_havePlan">
@@ -14,9 +17,8 @@ function Footer(props) {
                         <div className="row">
                             <div className="footer_havePlan_hbox_col-8">
 
-                                <div className="bigTitle">Have A Plan To Move?</div>
-                                <p>Mus pede ligula praesent mattis magna aptent lacus risus vulputate euismod dolor.
-                                    Accumsan integer imperdiet diam dui eu netus tempor bibendum.</p>
+                                <div className="bigTitle">{t("have")}</div>
+                                <p>{t("plan")}</p>
                                 <button className="footer_havePlan_hbox_col-8_urlSend">Get a Quote <IoIosArrowForward
                                     style={{width: "13px", height: "13px"}}/></button>
                             </div>

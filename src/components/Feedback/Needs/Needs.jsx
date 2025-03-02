@@ -1,17 +1,18 @@
 import React from 'react';
 import "../feedback.scss";
+import {useTranslation} from "react-i18next";
 const Needs = () => {
+    const {t} = useTranslation();
+
     return (
         <div className="feedback_why">
             <div className="container">
                 <div className="feedback_why_Wbox">
                     <div className="bigTitle colo">
-                        We will take care of all your moving needs from A to Z!
+                        {t("need")}
                     </div>
-                    <p className="colo">Magnis diam montes vehicula non habitant parturient sed. Nullam fermentum
-                        velit cursus tempor leo litora augue nec. Laoreet est sem cursus libero semper sed nulla
-                        purus ut habitant potenti.</p>
-                    <button className="discover">Discover More</button>
+                    <p className="colo">{t("needDes")}</p>
+                    <button className="discover">{t("discover")}</button>
 
                 </div>
             </div>

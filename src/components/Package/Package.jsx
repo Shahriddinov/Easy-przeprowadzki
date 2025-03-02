@@ -3,7 +3,9 @@ import "./package.scss";
 import {FaCheck} from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import {useTranslation} from "react-i18next";
 const Package = () => {
+    const {t} = useTranslation();
     useEffect(() => {
         AOS.init({
             duration: 1000, // Animatsiya davomiyligi (ms)
@@ -16,10 +18,9 @@ const Package = () => {
     return (
         <div className="package">
             <div className="container">
-                <div className="headTitle d-flex">Choose Your Package</div>
-                <div className="bigTitle d-flex">We’re always there when you need us</div>
-                <p className="package_descip ">Gravida elit class natoque nisi etiam consectetuer eget dui consectetur.
-                    Molestie sit imperdiet congue euismod senectus eleifend sociosqu turpis.</p>
+                <div className="headTitle d-flex">{t("ourPackage")}</div>
+                <div className="bigTitle d-flex">{t("pacAlways")}</div>
+                <p className="package_descip ">{t("pacDes")}</p>
 
                 <div className="row">
                     <div className="package_col-33" data-aos="fade-right">

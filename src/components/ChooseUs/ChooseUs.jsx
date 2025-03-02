@@ -5,29 +5,29 @@ import {IoChatboxEllipsesOutline} from "react-icons/io5";
 import { GrShield } from "react-icons/gr";
 import { BiSupport } from "react-icons/bi";
 import { MdOutlineEngineering } from "react-icons/md";
+import {useTranslation} from "react-i18next";
 
 
 const ChooseUs = () => {
+    const {t} = useTranslation();
     return (
         <div className="chooseUs">
             <div className="container">
                 <div className="row main__row">
                     <div className="chooseUs_col-6">
                         <div className="headTitle">
-                            Why Choose us
+                            {t("why")}
                         </div>
-                        <div className="bigTitle">We’ll take care of your stuff like it was our own</div>
-                        <p>Curae lobortis orci aliquam consectetuer mollis. Habitant faucibus scelerisque etiam accumsan
-                            euismod penatibus vestibulum diam.
-                        </p>
+                        <div className="bigTitle">{t("well")}</div>
+                        <p>{t("wellDes")}</p>
                         <div className="row">
                             <div className="chooseUs_col-6_helps">
                                 <div className="">
                                     <IoChatboxEllipsesOutline className="chooseUs_col-6_helps_chatIcon"/>
                                 </div>
                                 <div className="">
-                                    <div className="chooseUs_col-6_helps_HTitle">Free for Consultation</div>
-                                    <p> Sem vitae consectetur tristique ac mus praesent netus. </p>
+                                    <div className="chooseUs_col-6_helps_HTitle">{t("free")}</div>
+                                    <p>{t("freeDes")}</p>
                                 </div>
 
                             </div>
@@ -36,8 +36,8 @@ const ChooseUs = () => {
                                     <MdOutlineEngineering className="chooseUs_col-6_helps_chatIcon"/>
                                 </div>
                                 <div className="">
-                                    <div className="chooseUs_col-6_helps_HTitle">Professional Mover</div>
-                                    <p> Sem vitae consectetur tristique ac mus praesent netus. </p>
+                                    <div className="chooseUs_col-6_helps_HTitle">{t("pro")}</div>
+                                    <p> {t("proDes")} </p>
                                 </div>
 
                             </div>
@@ -48,8 +48,8 @@ const ChooseUs = () => {
                                     <GrShield className="chooseUs_col-6_helps_chatIcon"/>
                                 </div>
                                 <div className="">
-                                    <div className="chooseUs_col-6_helps_HTitle">Protection Services</div>
-                                    <p> Sem vitae consectetur tristique ac mus praesent netus. </p>
+                                    <div className="chooseUs_col-6_helps_HTitle">{t("profes")}</div>
+                                    <p> {t("profesDes")} </p>
                                 </div>
 
                             </div>
@@ -58,8 +58,8 @@ const ChooseUs = () => {
                                     <BiSupport  className="chooseUs_col-6_helps_chatIcon"/>
                                 </div>
                                 <div className="">
-                                    <div className="chooseUs_col-6_helps_HTitle">Ready 24/7 Support</div>
-                                    <p> Sem vitae consectetur tristique ac mus praesent netus. </p>
+                                    <div className="chooseUs_col-6_helps_HTitle">{t("support")}</div>
+                                    <p> {t("supportDes")}</p>
                                 </div>
 
                             </div>

@@ -8,13 +8,15 @@ import {Autoplay, Navigation} from "swiper/modules";
 import {FaStar} from "react-icons/fa";
 import {IoIosArrowForward} from "react-icons/io";
 import Needs from "./Needs/Needs";
+import {useTranslation} from "react-i18next";
 
 const Feedback = () => {
+    const {t} = useTranslation();
     return (
         <div className="feedback">
             <div className="container">
-                <div className="headTitle d-flex">Feedback</div>
-                <div className="bigTitle d-flex">What Our Customer are Saying</div>
+                <div className="headTitle d-flex">{t("feedback")}</div>
+                <div className="bigTitle d-flex">{t("what")}</div>
                 <p className="feedback_fdes">Per aenean auctor pellentesque a quam quis habitant mus semper nostra
                     ultrices. Per odio finibus rhoncus sit cubilia duis leo maximus ad.</p>
                 <div>
