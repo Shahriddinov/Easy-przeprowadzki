@@ -11,8 +11,8 @@ const Service = () => {
     const lan = useSelector((state) => state.language.language);
     const { t } = useTranslation();
     const servicesData = useSelector((state) => state.servicesSlice.servicesData);
-    const title="Services";
-    const description = "Our services include packing, loading, unloading, and unpacking—no matter where you’re headed!";
+    const title=`${t("services")}`;
+    const description = `${t("srDes")}`;
 
     console.log(servicesData)
     return (

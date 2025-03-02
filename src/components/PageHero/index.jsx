@@ -5,10 +5,11 @@ import "aos/dist/aos.css";
 import hero1 from "../../assets/images/about.jpg";
 import { AiFillCaretRight } from "react-icons/ai";
 import { useLocation } from "react-router";
+import {useTranslation} from "react-i18next";
 
 const PageHero = ({ title, description }) => {
   const location = useLocation();
-
+const {t} = useTranslation();
   // Sahifaga qarab fon rasmni o‘zgartirish
   const getBackgroundImage = () => {
     switch (location.pathname) {
@@ -49,7 +50,7 @@ const PageHero = ({ title, description }) => {
       >
         <div className="container">
           <div className="pageHero_desc_pageUrl">
-            <span>Home</span>
+            <span>{t("main")}</span>
             <AiFillCaretRight className="pageHero_desc_pageUrl_fills" />
             {title}
           </div>

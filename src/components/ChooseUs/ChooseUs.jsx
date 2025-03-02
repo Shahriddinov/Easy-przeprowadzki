@@ -18,8 +18,8 @@ const ChooseUs = () => {
                         <div className="headTitle">
                             {t("why")}
                         </div>
-                        <div className="bigTitle">{t("well")}</div>
-                        <p>{t("wellDes")}</p>
+                        <div className="bigTitle">{t("wellDes")}</div>
+                        {/*<p>{t("wellDes")}</p>*/}
                         <div className="row">
                             <div className="chooseUs_col-6_helps">
                                 <div className="">
@@ -66,16 +66,6 @@ const ChooseUs = () => {
                         </div>
                     </div>
                     <div className="chooseUs_col-4">
-                        <div className="chooseUs_col-4_contentChoose">
-                            <div className="chooseUs_col-4_contentChoose_counter">
-                                <div className="chooseUs_col-4_contentChoose_counter_numberWrapper">
-                                    12+
-                                </div>
-                                <div className="chooseUs_col-4_contentChoose_counter_Ctitle">
-                                    Storage Center <br/> Locations
-                                </div>
-                            </div>
-                        </div>
                         <img className="chooseUs_col-4_chooseImg" src={chooseImg} alt=""/>
                     </div>
                 </div>

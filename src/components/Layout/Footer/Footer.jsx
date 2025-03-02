@@ -1,14 +1,104 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {IoIosArrowForward} from "react-icons/io";
 import footerImg from "../../../assets/images/Footer.png";
 import one from "../../../assets/images/1.png";
 import {BiSupport} from "react-icons/bi";
 import {AiFillCaretRight} from "react-icons/ai";
 import {useTranslation} from "react-i18next";
+import {useDispatch, useSelector} from "react-redux";
+import {getService} from "../../../reduxToolkit/services";
+import Spinner from "../../Spinner";
+
+const region =[
+    {
+        title_en:"Removals Warsaw Bemowo",
+        title_pl:"Przeprowadzki Warszawa Bemowo"
+    },
+    {
+        title_en:"Removals Warsaw Białołęka",
+        title_pl:"Przeprowadzki Warszawa Białołęka"
+
+    },
+    {
+        title_en:"Removals Warsaw Bielany",
+        title_pl:"Przeprowadzki Warszawa Bielany"
+    },
+    {
+        title_en:"Removals Warsaw Mokotów",
+        title_pl:"Przeprowadzki Warszawa Mokotów"
+    },
+    {
+        title_en:"Removals Warsaw Ochota",
+        title_pl:"Przeprowadzki Warszawa Ochota"
+    },
+    {
+        title_en:"Removals Warsaw Praga Południe",
+        title_pl:"Przeprowadzki Warszawa Ochota"
+    },
+    {
+        title_en:"Removals Warsaw Praga Północ",
+        title_pl:"Przeprowadzki Warszawa Ochota"
+    },
+    {
+        title_en:"Removals Warsaw Rembertów",
+        title_pl:"Przeprowadzki Warszawa Rembertów"
+    },
+    {
+        title_en:"Removals Warsaw Śródmieście",
+        title_pl:"Przeprowadzki Warszawa Śródmieście"
+    },
+    {
+        title_en: "Removals Warsaw Targówek",
+        title_pl:"Przeprowadzki Warszawa Targówek"
+    },
+    {
+        title_en: "Removals Warsaw Ursus",
+        title_pl:"Przeprowadzki Warszawa Ursus"
+    },
+    {
+        title_en: "Removals Warsaw Ursynów",
+        title_pl:"Przeprowadzki Warszawa Ursynów"
+    },
+    {
+        title_en: "Removals Warsaw Wawer",
+        title_pl:"Przeprowadzki Warszawa Wawer"
+    },
+    {
+        title_en: "Removals Warsaw Wesoła",
+        title_pl:"Przeprowadzki Warszawa Wesoła"
+    },
+    {
+        title_en: "Removals Warsaw Wilanów",
+        title_pl:"Przeprowadzki Warszawa Wilanów"
+    },
+    {
+        title_en: "Removals Warsaw Włochy",
+        title_pl:"Przeprowadzki Warszawa Włochy"
+    },{
+        title_en: "Removals Warsaw Wola",
+        title_pl:"Przeprowadzki Warszawa Wola"
+    },
+    {
+        title_en: "Removals Warsaw Żoliborz",
+        title_pl:"Przeprowadzki Warszawa Żoliborz"
+    },
+]
 
 function Footer(props) {
     const {t} = useTranslation();
+    const dispatch = useDispatch();
+    const lan = useSelector((state) => state.language.language);
+    const loading = useSelector((state) => state.servicesSlice.loading);
+    const servicesData = useSelector((state) => state.servicesSlice.servicesData);
 
+
+
+    useEffect(() => {
+        dispatch(getService());
+    }, [dispatch]);
+    if (loading) {
+        <Spinner/>
+    }
     return (
         <div className="footer">
             <div className="footer_havePlan">
@@ -19,7 +109,7 @@ function Footer(props) {
 
                                 <div className="bigTitle">{t("have")}</div>
                                 <p>{t("plan")}</p>
-                                <button className="footer_havePlan_hbox_col-8_urlSend">Get a Quote <IoIosArrowForward
+                                <button className="footer_havePlan_hbox_col-8_urlSend">{t("quec")}<IoIosArrowForward
                                     style={{width: "13px", height: "13px"}}/></button>
                             </div>
                             <div className="footer_havePlan_hbox_col-5">
@@ -36,9 +126,7 @@ function Footer(props) {
                             <div className="footer_Fcard_cols-4_log">
                                 <img width="100%" src={one} alt=""/>
                             </div>
-                            <p style={{color: "#FFFFFF", marginBottom: "15px"}}>Ut at quisque sodales aenean integer
-                                odio tristique condimentum sollicitudin. Class
-                                ornare quisque tincidunt efficitur augue conubia gravida.
+                            <p style={{color: "#FFFFFF", marginBottom: "25px", width:"80%"}}>{t("ease")} 😊🚚
                             </p>
                             <div className="footer_Fcard_cols-4_calls">
                                 <div className="footer_Fcard_cols-4_calls_callIcon">
@@ -52,71 +140,30 @@ function Footer(props) {
                             </div>
                         </div>
                         <div className="footer_Fcard_cols-2">
-                            <h2 className="footer_Fcard_cols-2_fserves">Servives</h2>
-                            <a href="#" className="footer_Fcard_cols-2_servesLink">
-                                <div className="footer_Fcard_cols-2_servesLink_iconRight">
-                                    <AiFillCaretRight className="airight"/>
-                                </div>
-                                Local Moving
-                            </a>
-                            <a href="#" className="footer_Fcard_cols-2_servesLink">
-                                <div className="footer_Fcard_cols-2_servesLink_iconRight">
-                                    <AiFillCaretRight className="airight"/>
-                                </div>
-                                Long Distance Moving
-                            </a>
-                            <a href="#" className="footer_Fcard_cols-2_servesLink">
-                                <div className="footer_Fcard_cols-2_servesLink_iconRight">
-                                    <AiFillCaretRight className="airight"/>
-                                </div>
-                                Storage Services
-                            </a>
-                            <a href="#" className="footer_Fcard_cols-2_servesLink">
-                                <div className="footer_Fcard_cols-2_servesLink_iconRight">
-                                    <AiFillCaretRight className="airight"/>
-                                </div>
-                                Office Moving
-                            </a>
-                            <a href="#" className="footer_Fcard_cols-2_servesLink">
-                                <div className="footer_Fcard_cols-2_servesLink_iconRight">
-                                    <AiFillCaretRight className="airight"/>
-                                </div>
-                                Overseas Moving
-                            </a>
+                            <h2 className="footer_Fcard_cols-2_fserves">{t("services")}</h2>
+                            {servicesData.map((service, index) => (
+                                <a href="/services" className="footer_Fcard_cols-2_servesLink" key={index}>
+                                    <div className="footer_Fcard_cols-2_servesLink_iconRight">
+                                        <AiFillCaretRight className="airight"/>
+                                    </div>
+                                    {service[`title_${lan}`]}
+                                </a>
+                            ))}
+
+
                         </div>
                         <div className="footer_Fcard_cols-2">
-                            <h2 className="footer_Fcard_cols-2_fserves">About</h2>
+                            <h2 className="footer_Fcard_cols-2_fserves">{t("warsaw")}</h2>
+                            {region.map((region, index) => (
+                                <a href="#" className="footer_Fcard_cols-2_servesLink" key={index}>
+                                    <div className="footer_Fcard_cols-2_servesLink_iconRight">
+                                        <AiFillCaretRight className="airight"/>
+                                    </div>
+                                    {region[`title_${lan}`]}
+                                </a>
+                            ))}
 
-                            <a href="#" className="footer_Fcard_cols-2_servesLink">
-                                <div className="footer_Fcard_cols-2_servesLink_iconRight">
-                                    <AiFillCaretRight className="airight"/>
-                                </div>
-                                Contact Us
-                            </a>
-                            <a href="#" className="footer_Fcard_cols-2_servesLink">
-                                <div className="footer_Fcard_cols-2_servesLink_iconRight">
-                                    <AiFillCaretRight className="airight"/>
-                                </div>
-                                FAQs
-                            </a>
-                            <a href="#" className="footer_Fcard_cols-2_servesLink">
-                                <div className="footer_Fcard_cols-2_servesLink_iconRight">
-                                    <AiFillCaretRight className="airight"/>
-                                </div>
-                                Press
-                            </a>
-                            <a href="#" className="footer_Fcard_cols-2_servesLink">
-                                <div className="footer_Fcard_cols-2_servesLink_iconRight">
-                                    <AiFillCaretRight className="airight"/>
-                                </div>
-                                Out Blog
-                            </a>
-                            <a href="#" className="footer_Fcard_cols-2_servesLink">
-                                <div className="footer_Fcard_cols-2_servesLink_iconRight">
-                                    <AiFillCaretRight className="airight"/>
-                                </div>
-                                Careers
-                            </a>
+
                         </div>
                         <div className="footer_Fcard_cols-2">
                             <h2 className="footer_Fcard_cols-2_fserves">Get In Touch</h2>

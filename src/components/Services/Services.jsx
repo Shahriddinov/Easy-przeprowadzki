@@ -31,7 +31,6 @@ const Services = () => {
     if (loading) {
         <Spinner/>
     }
-    console.log(servicesData)
     return (
         <div className="services">
             <div className="container">

@@ -16,9 +16,9 @@ const Feedback = () => {
         <div className="feedback">
             <div className="container">
                 <div className="headTitle d-flex">{t("feedback")}</div>
-                <div className="bigTitle d-flex">{t("what")}</div>
-                <p className="feedback_fdes">Per aenean auctor pellentesque a quam quis habitant mus semper nostra
-                    ultrices. Per odio finibus rhoncus sit cubilia duis leo maximus ad.</p>
+                <div className="bigTitle d-flex" >{t("what")}</div>
+                {/*<p className="feedback_fdes">Per aenean auctor pellentesque a quam quis habitant mus semper nostra*/}
+                {/*    ultrices. Per odio finibus rhoncus sit cubilia duis leo maximus ad.</p>*/}
                 <div>
                     <Swiper
                         modules={[Navigation, Autoplay]}

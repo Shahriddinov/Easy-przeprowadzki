@@ -5,10 +5,11 @@ import {PiTrolleySuitcaseBold} from "react-icons/pi";
 import {AiFillCaretRight} from "react-icons/ai";
 import {MdApartment} from "react-icons/md";
 import {IoIosGlobe} from "react-icons/io";
+import {useTranslation} from "react-i18next";
 
 const ContactUs = () => {
-    const title = "Contact Us";
-    const description = "Contact Us";
+    const {t} = useTranslation();
+    const title = `${t("contactUs")}`;
     return (
         <>
             <PageHero title={title}/>
@@ -82,42 +83,42 @@ const ContactUs = () => {
                             </div>
                         </div>
                         <div className="contact_col-45">
-                            <div className="contact_col-45_sizeDefault">Send us a message</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
-                                ullamcorper mattis.</p>
+                            <div className="contact_col-45_sizeDefault">{t("send")}</div>
+                            {/*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec*/}
+                            {/*    ullamcorper mattis.</p>*/}
                             <form>
                                 <div className="form-group">
                                     <div className="form-control">
-                                        <label htmlFor="name" className="form-list">Your Name</label>
-                                        <input name="name" id="name" type="name" placeholder="Your Name"
+                                        <label htmlFor="name" className="form-list">{t("name")}</label>
+                                        <input name="name" id="name" type="text" placeholder={t("name")}
                                                className="form-input"/>
                                     </div>
                                     <div className="form-control">
-                                        <label htmlFor="phone" className="form-list">Phone</label>
-                                        <input name="phone" id="phone" type="phone" placeholder="Your Phone"
+                                        <label htmlFor="phone" className="form-list">{t("phone")}</label>
+                                        <input name="phone" id="phone" type="number" placeholder={t("phone")}
                                                className="form-input"/>
                                     </div>
 
                                 </div>
                                 <div className="form-group">
                                     <div className="form-control">
-                                        <label htmlFor="email" className="form-list">Email Address</label>
-                                        <input name="email" id="email" type="email" placeholder="Your email"
+                                        <label htmlFor="email" className="form-list">{t("email")}</label>
+                                        <input name="email" id="email" type="email" placeholder={t("email")}
                                                className="form-input"/>
                                     </div>
                                     <div className="form-control">
-                                        <label htmlFor="subject" className="form-list">Subject </label>
-                                        <input name="subject" id="subject" type="text" placeholder="Your Subject"
+                                        <label htmlFor="subject" className="form-list">{t("subject")} </label>
+                                        <input name="subject" id="subject" type="text" placeholder={t("subject")}
                                                className="form-input"/>
                                     </div>
 
                                 </div>
                                 <div className="form-control" style={{width: '100%'}}>
-                                    <label htmlFor="message" className="form-list">Subject </label>
-                                    <textarea name="message" id="message" placeholder="Your Message"
+                                    <label htmlFor="message" className="form-list">{t("message")}</label>
+                                    <textarea name="message" id="message" placeholder={t("message")}
                                               className="form-textarea"/>
                                 </div>
-                                <button type="submit" className="sendForm">Send Message</button>
+                                <button type="submit" className="sendForm">{t("sendM")}</button>
                             </form>
                         </div>
                     </div>
@@ -127,7 +128,7 @@ const ContactUs = () => {
                 }}>
                     <div className="contact_local">
                         <div className="container">
-                            <h2 className="contact_local_our">Our Location</h2>
+                            <h2 className="contact_local_our">{t("our")}</h2>
                             <div className="contact_local_places">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2214.005727061684!2d20.97491907617065!3d52.178766161438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4719333dc1783d07%3A0xf2c0a47167d23e13!2sKomitetu%20Obrony%20Robotnik%C3%B3w%2039C%2C%2002-148%20Warszawa%2C%20Poland!5e1!3m2!1sen!2s!4v1740336096848!5m2!1sen!2s"

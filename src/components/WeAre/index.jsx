@@ -52,12 +52,12 @@ const WeAre = () => {
                         </div>
                         <div className="weAre_col-6">
                             <h2 className="headTitle" data-aos="fade-left">{t("who")}</h2>
-                            <h3 className="bigTitle">{item[`title_${lan}`]}</h3>
-                            <div className="weAre_col-6_elementor">
-                                <p className="weAre_col-6_elementor_littileText"
-                                   data-aos="fade-up">{item[`quote_${lan}`]}</p>
-                            </div>
-                            <p className="weAre_col-6_ps" data-aos="fade-down">{item[`content_${lan}`]}</p>
+                            <h3 className="bigTitles">{item[`content_${lan}`]}</h3>
+                            {/*<div className="weAre_col-6_elementor">*/}
+                            {/*    <p className="weAre_col-6_elementor_littileText"*/}
+                            {/*       data-aos="fade-up">{item[`quote_${lan}`]}</p>*/}
+                            {/*</div>*/}
+                            {/*<p className="weAre_col-6_ps" data-aos="fade-down">{item[`content_${lan}`]}</p>*/}
                             {item[`benifits_${lan}`].map((item, index) => (
                                 <ul className="weAre_col-6_elItem" data-aos="fade-left" key={index}>
                                     <li className="weAre_col-6_elItem_iconList">
