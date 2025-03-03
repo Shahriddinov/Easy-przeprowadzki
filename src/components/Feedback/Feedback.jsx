@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import "./feedback.scss";
 import "swiper/css";
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -9,9 +9,27 @@ import {FaStar} from "react-icons/fa";
 import {IoIosArrowForward} from "react-icons/io";
 import Needs from "./Needs/Needs";
 import {useTranslation} from "react-i18next";
+import {useDispatch, useSelector} from "react-redux";
+import {getService} from "../../reduxToolkit/services";
+import Spinner from "../Spinner";
+import {getFeedBack} from "../../reduxToolkit/FeedBackSlice";
 
 const Feedback = () => {
     const {t} = useTranslation();
+    const dispatch = useDispatch();
+    const lan = useSelector((state) => state.language.language);
+    const loading = useSelector((state) => state.feedBackSlice.loading);
+    const feedBackData = useSelector((state) => state.feedBackSlice.feedBackData);
+
+
+
+    useEffect(() => {
+        dispatch(getFeedBack());
+    }, [dispatch]);
+    if (loading) {
+        <Spinner/>
+    }
+    console.log(feedBackData)
     return (
         <div className="feedback">
             <div className="container">
@@ -53,96 +71,19 @@ const Feedback = () => {
                         loop={true} // Infinite loop
                         className="hero_carousel"
                     >
-                        <SwiperSlide className="feedback_slider">
-                            <div className="feedback_slider_star d-flex">
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                            </div>
-                            <p className="feedback_slider_Fdes">
-                                Molestie odio inceptos adipiscing dui dictum. Sodales aptent hac tristique integer
-                                nullam in vestibulum. Hac feugiat placerat laoreet fames pharetra pede imperdiet sodales
-                                in.
-                            </p>
-                            <div className="feedback_slider_namesF">Anita D. Costin</div>
-                        </SwiperSlide>
-                        <SwiperSlide className="feedback_slider">
-                            <div className="feedback_slider_star d-flex">
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                            </div>
-                            <p className="feedback_slider_Fdes">
-                                Molestie odio inceptos adipiscing dui dictum. Sodales aptent hac tristique integer
-                                nullam in vestibulum. Hac feugiat placerat laoreet fames pharetra pede imperdiet sodales
-                                in.
-                            </p>
-                            <div className="feedback_slider_namesF">Anita D. Costin</div>
-                        </SwiperSlide>
-                        <SwiperSlide className="feedback_slider">
-                            <div className="feedback_slider_star d-flex">
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                            </div>
-                            <p className="feedback_slider_Fdes">
-                                Molestie odio inceptos adipiscing dui dictum. Sodales aptent hac tristique integer
-                                nullam in vestibulum. Hac feugiat placerat laoreet fames pharetra pede imperdiet sodales
-                                in.
-                            </p>
-                            <div className="feedback_slider_namesF">Anita D. Costin</div>
-                        </SwiperSlide>
-                        <SwiperSlide className="feedback_slider">
-                            <div className="feedback_slider_star d-flex">
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                            </div>
-                            <p className="feedback_slider_Fdes">
-                                Molestie odio inceptos adipiscing dui dictum. Sodales aptent hac tristique integer
-                                nullam in vestibulum. Hac feugiat placerat laoreet fames pharetra pede imperdiet sodales
-                                in.
-                            </p>
-                            <div className="feedback_slider_namesF">Anita D. Costin</div>
-                        </SwiperSlide>
-                        <SwiperSlide className="feedback_slider">
-                            <div className="feedback_slider_star d-flex">
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                            </div>
-                            <p className="feedback_slider_Fdes">
-                                Molestie odio inceptos adipiscing dui dictum. Sodales aptent hac tristique integer
-                                nullam in vestibulum. Hac feugiat placerat laoreet fames pharetra pede imperdiet sodales
-                                in.
-                            </p>
-                            <div className="feedback_slider_namesF">Anita D. Costin</div>
-                        </SwiperSlide>
-                        <SwiperSlide className="feedback_slider">
-                            <div className="feedback_slider_star d-flex">
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                            </div>
-                            <p className="feedback_slider_Fdes">
-                                Molestie odio inceptos adipiscing dui dictum. Sodales aptent hac tristique integer
-                                nullam in vestibulum. Hac feugiat placerat laoreet fames pharetra pede imperdiet sodales
-                                in.
-                            </p>
-                            <div className="feedback_slider_namesF">Anita D. Costin</div>
-                        </SwiperSlide>
+                        {feedBackData.map((item, index) => (
+                            <SwiperSlide className="feedback_slider" key={index}>
+                                <div className="feedback_slider_star d-flex">
+                                    {[...Array(item.rating)].map((_, i) => (
+                                        <FaStar key={i} />
+                                    ))}
+                                </div>
+                                <p className="feedback_slider_Fdes">{item[`message_${lan}`]}</p>
+                                <div className="feedback_slider_namesF">{item.fullname}</div>
+                            </SwiperSlide>
+                        ))}
+
+
                     </Swiper>
                 </div>
             </div>
