@@ -57,13 +57,12 @@
         }
       }
     }
-    .bigTitles{
-
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 1.4em;
-        color: $secondary-color;
-        margin-bottom: 15px;
+    .bigTitles {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.4em;
+      color: $secondary-color;
+      margin-bottom: 15px;
     }
   }
 
@@ -91,6 +90,9 @@
       padding: 2em 1.5em;
     }
     &_col-6 {
+      .bigTitles {
+        font-size: 20px;
+      }
       &_imgBig {
         .we2 {
           height: 158px;

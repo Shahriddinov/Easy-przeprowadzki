@@ -56,7 +56,7 @@ const Services = () => {
                                  key={index}>
                                 <div style={{position: "relative", zIndex: "2"}}>
                                     <div className="services_cards_col-3_iconBox">
-                                        <img src={service.icon}  width="100px" alt=""/>
+                                        <img src={service.icon}  alt=""/>
                                     </div>
                                     <div className="servicesTitle d-flex">
                                         {service[`title_${lan}`]}
