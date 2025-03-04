@@ -19,8 +19,6 @@ const ContactUs = () => {
                         <div className="contact_col-55">
                             <div className="headTitle">Get In Touch</div>
                             <div className="bigTitle">We’d love to hear from you</div>
-                            <p>Nostra vivamus tristique cras ante porttitor habitasse rutrum pede. Faucibus nam cursus
-                                ultrices a dolor eleifend adipiscing.</p>
                             <div className="contact_col-55_information">
                                 <div className="contact_col-55_information_callIcons">
                                     <div>

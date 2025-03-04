@@ -177,9 +177,9 @@ function Footer(props) {
                                 <div className="footer_Fcard_cols-2_servesLink_iconRight"></div>
                                 +48509931555
                             </a>
-                            <a href="mailto:hello@yourdomain.com" className="footer_Fcard_cols-2_servesLink">
+                            <a href="mailto:easyprzeprowadzka@gmail.com" className="footer_Fcard_cols-2_servesLink">
                                 <div className="footer_Fcard_cols-2_servesLink_iconRight"></div>
-                                hello@yourdomain.com
+                                easyprzeprowadzka@gmail.com
                             </a>
                         </div>
                     </div>
