@@ -50,7 +50,7 @@ const Package = () => {
                             <h2 className="package_col-33_dollar_IconD">zł</h2>
                             <h2 className="package_col-33_dollar_dprice"> {String(priceData[1]?.price).replace(/(\d{3})(?=\d)/, '$1-')}</h2>
                         </div>
-                        <h2 className="package_col-33_month">{t("person")}</h2>
+                        <h2 className="package_col-33_month">{t("person1")}</h2>
 
                         <ul>
                             {priceData[0]?.benefits?.map((item, index) => (
@@ -77,7 +77,7 @@ const Package = () => {
                             <h2 className="package_col-33_dollar_IconD dd">zł</h2>
                             <h2 className="package_col-33_dollar_dprice pp"> {String(priceData[0]?.price).replace(/(\d{3})(?=\d)/, '$1-')}</h2>
                         </div>
-                        <h2 className="package_col-33_month dd">{t("person")}</h2>
+                        <h2 className="package_col-33_month dd">{t("person2")}</h2>
 
                         <ul>
                             {priceData[0]?.benefits?.map((item, index) => (
@@ -101,7 +101,7 @@ const Package = () => {
                                 {String(priceData[2]?.price).replace(/(\d{3})(?=\d)/, '$1-')}
                             </h2>
                         </div>
-                        <h2 className="package_col-33_month">{t("person")}</h2>
+                        <h2 className="package_col-33_month">{t("person3")}</h2>
 
                         <ul>
                             {priceData[0]?.benefits?.map((item, index) => (
