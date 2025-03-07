@@ -43,14 +43,14 @@ const Package = () => {
                 <div className="row">
 
                     <div className="package_col-33" data-aos="fade-right">
-                        <h4 className="package_col-33_packing">{priceData[0]?.[`title_${lan}`]}</h4>
+                        <h4 className="package_col-33_packing">{priceData[1]?.[`title_${lan}`]}</h4>
 
 
                         <div className="package_col-33_dollar">
-                            <h2 className="package_col-33_dollar_IconD">ZL</h2>
-                            <h2 className="package_col-33_dollar_dprice"> {String(priceData[0]?.price).replace(/(\d{3})(?=\d)/, '$1-')}</h2>
+                            <h2 className="package_col-33_dollar_IconD">zł</h2>
+                            <h2 className="package_col-33_dollar_dprice"> {String(priceData[1]?.price).replace(/(\d{3})(?=\d)/, '$1-')}</h2>
                         </div>
-                        <h2 className="package_col-33_month">Monthly</h2>
+                        <h2 className="package_col-33_month">{t("person")}</h2>
 
                         <ul>
                             {priceData[0]?.benefits?.map((item, index) => (
@@ -62,7 +62,7 @@ const Package = () => {
 
 
                         </ul>
-                        <a href="#" className="package_col-33_gets">
+                        <a href="tel:+48509931555" className="package_col-33_gets">
                             {t("discover")}
                         </a>
                     </div>
@@ -70,14 +70,14 @@ const Package = () => {
 
                         <div className="package_col-33_popul">Popular</div>
 
-                        <h4 className="package_col-33_packing">{priceData[1]?.[`title_${lan}`]}</h4>
+                        <h4 className="package_col-33_packing">{priceData[0]?.[`title_${lan}`]}</h4>
 
 
                         <div className="package_col-33_dollar">
-                            <h2 className="package_col-33_dollar_IconD dd">ZL</h2>
-                            <h2 className="package_col-33_dollar_dprice pp"> {String(priceData[1]?.price).replace(/(\d{3})(?=\d)/, '$1-')}</h2>
+                            <h2 className="package_col-33_dollar_IconD dd">zł</h2>
+                            <h2 className="package_col-33_dollar_dprice pp"> {String(priceData[0]?.price).replace(/(\d{3})(?=\d)/, '$1-')}</h2>
                         </div>
-                        <h2 className="package_col-33_month dd">Monthly</h2>
+                        <h2 className="package_col-33_month dd">{t("person")}</h2>
 
                         <ul>
                             {priceData[0]?.benefits?.map((item, index) => (
@@ -88,7 +88,7 @@ const Package = () => {
                             ))}
 
                         </ul>
-                        <a href="#" className="package_col-33_gets bbb">
+                        <a href="tel:+48509931555" className="package_col-33_gets bbb">
                             {t("discover")}
                         </a>
                     </div>
@@ -96,12 +96,12 @@ const Package = () => {
                         <h4 className="package_col-33_packing">{priceData[2]?.[`title_${lan}`]}</h4>
 
                         <div className="package_col-33_dollar">
-                            <h2 className="package_col-33_dollar_IconD">ZL</h2>
+                            <h2 className="package_col-33_dollar_IconD">zł</h2>
                             <h2 className="package_col-33_dollar_dprice">
                                 {String(priceData[2]?.price).replace(/(\d{3})(?=\d)/, '$1-')}
                             </h2>
                         </div>
-                        <h2 className="package_col-33_month">Monthly</h2>
+                        <h2 className="package_col-33_month">{t("person")}</h2>
 
                         <ul>
                             {priceData[0]?.benefits?.map((item, index) => (
@@ -111,7 +111,7 @@ const Package = () => {
                                 </li>
                             ))}
                         </ul>
-                        <a href="#" className="package_col-33_gets">
+                        <a href="tel:+48509931555" className="package_col-33_gets">
                             {t("discover")}
                         </a>
                     </div>

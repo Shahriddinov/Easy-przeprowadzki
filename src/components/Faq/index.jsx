@@ -2,8 +2,10 @@ import React from 'react';
 import "./faq.scss";
 import { BiSupport } from "react-icons/bi";
 import Accordion from "../Accordion/Accordion";
+import {useTranslation} from "react-i18next";
 
 const Faq = () => {
+    const {t} = useTranslation();
     return (
         <div className="faq">
             <div className="container">
@@ -11,13 +13,11 @@ const Faq = () => {
                     <div className="faq_col-2">
                         <div className="headTitle">F.A.Q</div>
                         <div className="bigTitle">
-                            Frequently Asked Questions
+                            {t("faq")}
                         </div>
 
                         <div className="faq_col-2_chatOur">
-                            <h4 className="faq_col-2_chatOur_live">Chat Live With Our Expert Movers</h4>
 
-                            <button className="faq_col-2_chatOur_onlineChat"><BiSupport/>Chat Us</button>
 
                         </div>
                     </div>

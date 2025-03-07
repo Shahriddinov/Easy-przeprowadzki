@@ -1,11 +1,12 @@
 import React from 'react';
 import "./contact.scss";
 import PageHero from "../../components/PageHero";
-import {PiTrolleySuitcaseBold} from "react-icons/pi";
+import { FiFacebook } from "react-icons/fi";
 import {AiFillCaretRight} from "react-icons/ai";
 import {MdApartment} from "react-icons/md";
 import {IoIosGlobe} from "react-icons/io";
 import {useTranslation} from "react-i18next";
+import { GrInstagram } from "react-icons/gr";
 
 const ContactUs = () => {
     const {t} = useTranslation();
@@ -17,47 +18,45 @@ const ContactUs = () => {
                 <div className="container">
                     <div className="row">
                         <div className="contact_col-55">
-                            <div className="headTitle">Get In Touch</div>
-                            <div className="bigTitle">We’d love to hear from you</div>
+                            <div className="headTitle">{t("getIn")}</div>
+                            <div className="bigTitle">{t("wed")}</div>
                             <div className="contact_col-55_information">
                                 <div className="contact_col-55_information_callIcons">
                                     <div>
                                         <div className="contact_col-55_information_callIcons_boxIcon">
-                                            <PiTrolleySuitcaseBold/></div>
+                                            <GrInstagram/></div>
                                     </div>
                                     <div className="contact_col-55_information_callIcons_callsText">
                                         <div>
-                                            <h2 className="contact_col-55_information_callIcons_callsText_res">Residential</h2>
+                                            <h2 className="contact_col-55_information_callIcons_callsText_res">Instagram</h2>
                                             <div className="d-fl">
-                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +1
-                                                    (555) 987 6541</p>
+                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +4 (850) 993 15 55</p>
                                                 <p className="d-flex"><AiFillCaretRight
-                                                    style={{fontSize: "12px"}}/> hello@yourdomain.com</p>
+                                                    style={{fontSize: "12px"}}/> easyprzeprowadski.pl</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="contact_col-55_information_gets">Get a qeato</div>
+                                <a href="https://www.instagram.com/easyprzeprowadski.pl/" target="_blank" className="contact_col-55_information_gets">{t("queto")}</a>
                             </div>
                             <div className="contact_col-55_information">
                                 <div className="contact_col-55_information_callIcons">
                                     <div>
                                         <div className="contact_col-55_information_callIcons_boxIcon">
-                                            <MdApartment/></div>
+                                            <FiFacebook/></div>
                                     </div>
                                     <div className="contact_col-55_information_callIcons_callsText">
                                         <div>
-                                            <h2 className="contact_col-55_information_callIcons_callsText_res">Commercial</h2>
+                                            <h2 className="contact_col-55_information_callIcons_callsText_res">Facebook</h2>
                                             <div className="d-fl">
-                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +1
-                                                    (555) 987 6541</p>
+                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +4 (850) 993 15 55</p>
                                                 <p className="d-flex"><AiFillCaretRight
-                                                    style={{fontSize: "12px"}}/> hello@yourdomain.com</p>
+                                                    style={{fontSize: "12px"}}/>East Przeprowadski </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="contact_col-55_information_gets">Get a qeato</div>
+                                <a href="https://www.facebook.com/profile.php?id=61574070050784" target="_blank" className="contact_col-55_information_gets">{t("queto")}</a>
                             </div>
                             <div className="contact_col-55_information">
                                 <div className="contact_col-55_information_callIcons">
@@ -77,7 +76,7 @@ const ContactUs = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="contact_col-55_information_gets">Get a qeato</div>
+                                <div className="contact_col-55_information_gets">{t("queto")}</div>
                             </div>
                         </div>
                         <div className="contact_col-45">
