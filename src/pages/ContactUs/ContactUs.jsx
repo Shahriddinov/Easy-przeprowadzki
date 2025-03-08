@@ -3,7 +3,7 @@ import "./contact.scss";
 import PageHero from "../../components/PageHero";
 import { FiFacebook } from "react-icons/fi";
 import {AiFillCaretRight} from "react-icons/ai";
-import {MdApartment} from "react-icons/md";
+import { FaWhatsapp } from "react-icons/fa6";
 import {IoIosGlobe} from "react-icons/io";
 import {useTranslation} from "react-i18next";
 import { GrInstagram } from "react-icons/gr";
@@ -62,27 +62,24 @@ const ContactUs = () => {
                                 <div className="contact_col-55_information_callIcons">
                                     <div>
                                         <div className="contact_col-55_information_callIcons_boxIcon">
-                                            <IoIosGlobe/></div>
+                                            <FaWhatsapp/></div>
                                     </div>
                                     <div className="contact_col-55_information_callIcons_callsText">
                                         <div>
-                                            <h2 className="contact_col-55_information_callIcons_callsText_res">International</h2>
+                                            <h2 className="contact_col-55_information_callIcons_callsText_res">WhatsApp</h2>
                                             <div className="d-fl">
-                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +1
-                                                    (555) 987 6541</p>
+                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +4 (850) 993 15 55</p>
                                                 <p className="d-flex"><AiFillCaretRight
-                                                    style={{fontSize: "12px"}}/> hello@yourdomain.com</p>
+                                                    style={{fontSize: "12px"}}/> East Przeprowadski</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="contact_col-55_information_gets">{t("queto")}</div>
+                                <a href="https://web.whatsapp.com/" className="contact_col-55_information_gets">{t("queto")}</a>
                             </div>
                         </div>
                         <div className="contact_col-45">
                             <div className="contact_col-45_sizeDefault">{t("send")}</div>
-                            {/*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec*/}
-                            {/*    ullamcorper mattis.</p>*/}
                             <form>
                                 <div className="form-group">
                                     <div className="form-control">

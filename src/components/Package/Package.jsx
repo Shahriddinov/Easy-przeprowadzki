@@ -7,6 +7,7 @@ import {useTranslation} from "react-i18next";
 import {useDispatch, useSelector} from "react-redux";
 import Spinner from "../Spinner";
 import {getPricing} from "../../reduxToolkit/PricingSlice";
+import { RxCrossCircled } from "react-icons/rx";
 
 const Package = () => {
     const {t} = useTranslation();
@@ -23,7 +24,6 @@ const Package = () => {
         <Spinner/>
     }
 
-    console.log(priceData)
     useEffect(() => {
         AOS.init({
             duration: 1000, // Animatsiya davomiyligi (ms)
@@ -47,7 +47,7 @@ const Package = () => {
 
 
                         <div className="package_col-33_dollar">
-                            <h2 className="package_col-33_dollar_IconD">zł/g</h2>
+                            <h2 className="package_col-33_dollar_IconD">zł/h</h2>
                             <h2 className="package_col-33_dollar_dprice"> {String(priceData[1]?.price).replace(/(\d{3})(?=\d)/, '$1-')}</h2>
                         </div>
                         <h2 className="package_col-33_month">{t("person1")}</h2>
@@ -55,10 +55,16 @@ const Package = () => {
                         <ul>
                             {priceData[0]?.benefits?.map((item, index) => (
                                 <li className="package_col-33_liCheck" key={index}>
-                                    <FaCheck className="package_col-33_liCheck_fache"/>
+                                    {console.log(item)}
+                                    {item.id === 'bba1325e-acf5-49e7-b2e4-256058c777f9' || item.id === '77cd26ff-546e-4681-9b9f-952856b20d3d' ? (
+                                        <RxCrossCircled className="package_col-33_liCheck_fache" style={{color:'red'}} />
+                                    ) : (
+                                        <FaCheck className="package_col-33_liCheck_fache" />
+                                    )}
                                     {item?.[`name_${lan}`]}
                                 </li>
                             ))}
+
 
 
                         </ul>
@@ -74,7 +80,7 @@ const Package = () => {
 
 
                         <div className="package_col-33_dollar">
-                            <h2 className="package_col-33_dollar_IconD dd">zł/g</h2>
+                            <h2 className="package_col-33_dollar_IconD dd">zł/h</h2>
                             <h2 className="package_col-33_dollar_dprice pp"> {String(priceData[0]?.price).replace(/(\d{3})(?=\d)/, '$1-')}</h2>
                         </div>
                         <h2 className="package_col-33_month dd">{t("person2")}</h2>
@@ -82,7 +88,11 @@ const Package = () => {
                         <ul>
                             {priceData[0]?.benefits?.map((item, index) => (
                                 <li className="package_col-33_liCheck" key={index}>
-                                    <FaCheck className="package_col-33_liCheck_fache pp"/>
+                                    {item.id === 'bba1325e-acf5-49e7-b2e4-256058c777f9' ? (
+                                        <RxCrossCircled className="package_col-33_liCheck_fache" style={{color:'red'}} />
+                                    ) : (
+                                        <FaCheck className="package_col-33_liCheck_fache" />
+                                    )}
                                     {item?.[`name_${lan}`]}
                                 </li>
                             ))}
@@ -96,7 +106,7 @@ const Package = () => {
                         <h4 className="package_col-33_packing">{priceData[2]?.[`title_${lan}`]}</h4>
 
                         <div className="package_col-33_dollar">
-                            <h2 className="package_col-33_dollar_IconD">zł/g</h2>
+                            <h2 className="package_col-33_dollar_IconD">zł/h</h2>
                             <h2 className="package_col-33_dollar_dprice">
                                 {String(priceData[2]?.price).replace(/(\d{3})(?=\d)/, '$1-')}
                             </h2>
@@ -104,8 +114,9 @@ const Package = () => {
                         <h2 className="package_col-33_month">{t("person3")}</h2>
 
                         <ul>
-                            {priceData[0]?.benefits?.map((item, index) => (
+                            {priceData[2]?.benefits?.map((item, index) => (
                                 <li className="package_col-33_liCheck" key={index}>
+
                                     <FaCheck className="package_col-33_liCheck_fache"/>
                                     {item?.[`name_${lan}`]}
                                 </li>
@@ -116,6 +127,7 @@ const Package = () => {
                         </a>
                     </div>
                 </div>
+                <h2 className="bigTitle" style={{marginTop:"50px"}}>{t("table")}</h2>
             </div>
         </div>
     );

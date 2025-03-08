@@ -14,7 +14,7 @@ const {t} = useTranslation();
   const getBackgroundImage = () => {
     switch (location.pathname) {
       case "/about":
-        return require("../../assets/images/about.jpg");
+        return require("../../assets/images/about1.jpg");
       case "/contact":
         return require("../../assets/images/contact.jpg");
       case "/services":
