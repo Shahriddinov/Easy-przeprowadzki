@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {IoIosArrowForward} from "react-icons/io";
 import footerImg from "../../../assets/images/Footer.png";
-import one from "../../../assets/images/1.png";
+import one from "../../../assets/images/logo.svg";
 import {BiSupport} from "react-icons/bi";
 import {AiFillCaretRight} from "react-icons/ai";
 import {useTranslation} from "react-i18next";
