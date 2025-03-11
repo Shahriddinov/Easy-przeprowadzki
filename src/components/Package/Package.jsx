@@ -4,8 +4,26 @@ import {FaCheck} from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {useTranslation} from "react-i18next";
+import {useDispatch, useSelector} from "react-redux";
+import Spinner from "../Spinner";
+import {getPricing} from "../../reduxToolkit/PricingSlice";
+import { RxCrossCircled } from "react-icons/rx";
+
 const Package = () => {
     const {t} = useTranslation();
+    const dispatch = useDispatch();
+    const lan = useSelector((state) => state.language.language);
+    const loading = useSelector((state) => state.pricingSlice.loading);
+    const priceData = useSelector((state) => state.pricingSlice.priceData);
+
+
+    useEffect(() => {
+        dispatch(getPricing());
+    }, [dispatch]);
+    if (loading) {
+        <Spinner/>
+    }
+
     useEffect(() => {
         AOS.init({
             duration: 1000, // Animatsiya davomiyligi (ms)
@@ -23,121 +41,93 @@ const Package = () => {
                 <p className="package_descip ">{t("pacDes")}</p>
 
                 <div className="row">
+
                     <div className="package_col-33" data-aos="fade-right">
-                        <h4 className="package_col-33_packing">Packing Services</h4>
-                        <p className="package_col-33_infoss">Sodales nam venenatis potenti lorem litora at scelerisque
-                            ullamcorper.</p>
+                        <h4 className="package_col-33_packing">{priceData[1]?.[`title_${lan}`]}</h4>
+
 
                         <div className="package_col-33_dollar">
-                            <h2 className="package_col-33_dollar_IconD">$</h2>
-                            <h2 className="package_col-33_dollar_dprice"> 49</h2>
+                            <h2 className="package_col-33_dollar_IconD">zł/h</h2>
+                            <h2 className="package_col-33_dollar_dprice"> {String(priceData[1]?.price).replace(/(\d{3})(?=\d)/, '$1-')}</h2>
                         </div>
-                        <h2 className="package_col-33_month">Monthly</h2>
+                        <h2 className="package_col-33_month">{t("person1")}</h2>
 
                         <ul>
-                            <li className="package_col-33_liCheck">
-                                <FaCheck className="package_col-33_liCheck_fache"/>
-                                Tempor sed libero fusce ultricies
-                            </li>
-                            <li className="package_col-33_liCheck">
-                                <FaCheck className="package_col-33_liCheck_fache"/>
-                                Massa nibh malesuada urna
-                            </li>
-                            <li className="package_col-33_liCheck">
-                                <FaCheck className="package_col-33_liCheck_fache"/>
-                                Natoque ipsum sodales adipiscing
-                            </li>
-                            <li className="package_col-33_liCheck">
-                                <FaCheck className="package_col-33_liCheck_fache"/>
-                                Lorem congue primis odio
-                            </li>
-                            <li className="package_col-33_liCheck">
-                                <FaCheck className="package_col-33_liCheck_fache"/>
-                                Vitae suspendisse ullamcorper
-                            </li>
+                            {priceData[0]?.benefits?.map((item, index) => (
+                                <li className="package_col-33_liCheck" key={index}>
+                                    {console.log(item)}
+                                    {item.id === 'bba1325e-acf5-49e7-b2e4-256058c777f9' || item.id === '77cd26ff-546e-4681-9b9f-952856b20d3d' ? (
+                                        <RxCrossCircled className="package_col-33_liCheck_fache" style={{color:'red'}} />
+                                    ) : (
+                                        <FaCheck className="package_col-33_liCheck_fache" />
+                                    )}
+                                    {item?.[`name_${lan}`]}
+                                </li>
+                            ))}
+
+
+
                         </ul>
-                        <a href="#" className="package_col-33_gets">
-                            Get Started
+                        <a href="tel:+48509931555" className="package_col-33_gets">
+                            {t("discover")}
                         </a>
                     </div>
                     <div className="package_col-33" data-aos="fade-up">
 
-                            <div className="package_col-33_popul">Popular</div>
+                        <div className="package_col-33_popul">Popular</div>
 
-                        <h4 className="package_col-33_packing">Full Moving Services</h4>
-                        <p className="package_col-33_infoss">Sodales nam venenatis potenti lorem litora at scelerisque
-                            ullamcorper.</p>
+                        <h4 className="package_col-33_packing">{priceData[0]?.[`title_${lan}`]}</h4>
+
 
                         <div className="package_col-33_dollar">
-                            <h2 className="package_col-33_dollar_IconD dd">$</h2>
-                            <h2 className="package_col-33_dollar_dprice pp"> 69</h2>
+                            <h2 className="package_col-33_dollar_IconD dd">zł/h</h2>
+                            <h2 className="package_col-33_dollar_dprice pp"> {String(priceData[0]?.price).replace(/(\d{3})(?=\d)/, '$1-')}</h2>
                         </div>
-                        <h2 className="package_col-33_month dd">Monthly</h2>
+                        <h2 className="package_col-33_month dd">{t("person2")}</h2>
 
                         <ul>
-                            <li className="package_col-33_liCheck">
-                                <FaCheck className="package_col-33_liCheck_fache pp"/>
-                                Tempor sed libero fusce ultricies
-                            </li>
-                            <li className="package_col-33_liCheck">
-                                <FaCheck className="package_col-33_liCheck_fache pp"/>
-                                Massa nibh malesuada urna
-                            </li>
-                            <li className="package_col-33_liCheck">
-                                <FaCheck className="package_col-33_liCheck_fache pp"/>
-                                Natoque ipsum sodales adipiscing
-                            </li>
-                            <li className="package_col-33_liCheck">
-                                <FaCheck className="package_col-33_liCheck_fache pp"/>
-                                Lorem congue primis odio
-                            </li>
-                            <li className="package_col-33_liCheck">
-                                <FaCheck className="package_col-33_liCheck_fache pp"/>
-                                Vitae suspendisse ullamcorper
-                            </li>
+                            {priceData[0]?.benefits?.map((item, index) => (
+                                <li className="package_col-33_liCheck" key={index}>
+                                    {item.id === 'bba1325e-acf5-49e7-b2e4-256058c777f9' ? (
+                                        <RxCrossCircled className="package_col-33_liCheck_fache" style={{color:'red'}} />
+                                    ) : (
+                                        <FaCheck className="package_col-33_liCheck_fache" />
+                                    )}
+                                    {item?.[`name_${lan}`]}
+                                </li>
+                            ))}
+
                         </ul>
-                        <a href="#" className="package_col-33_gets bbb">
-                            Get Started
+                        <a href="tel:+48509931555" className="package_col-33_gets bbb">
+                            {t("discover")}
                         </a>
                     </div>
                     <div className="package_col-33" data-aos="fade-left">
-                        <h4 className="package_col-33_packing">Full Moving Services</h4>
-                        <p className="package_col-33_infoss">Sodales nam venenatis potenti lorem litora at scelerisque
-                            ullamcorper.</p>
+                        <h4 className="package_col-33_packing">{priceData[2]?.[`title_${lan}`]}</h4>
 
                         <div className="package_col-33_dollar">
-                            <h2 className="package_col-33_dollar_IconD">$</h2>
-                            <h2 className="package_col-33_dollar_dprice"> 149</h2>
+                            <h2 className="package_col-33_dollar_IconD">zł/h</h2>
+                            <h2 className="package_col-33_dollar_dprice">
+                                {String(priceData[2]?.price).replace(/(\d{3})(?=\d)/, '$1-')}
+                            </h2>
                         </div>
-                        <h2 className="package_col-33_month">Monthly</h2>
+                        <h2 className="package_col-33_month">{t("person3")}</h2>
 
                         <ul>
-                            <li className="package_col-33_liCheck">
-                                <FaCheck className="package_col-33_liCheck_fache"/>
-                                Tempor sed libero fusce ultricies
-                            </li>
-                            <li className="package_col-33_liCheck">
-                                <FaCheck className="package_col-33_liCheck_fache"/>
-                                Massa nibh malesuada urna
-                            </li>
-                            <li className="package_col-33_liCheck">
-                                <FaCheck className="package_col-33_liCheck_fache"/>
-                                Natoque ipsum sodales adipiscing
-                            </li>
-                            <li className="package_col-33_liCheck">
-                                <FaCheck className="package_col-33_liCheck_fache"/>
-                                Lorem congue primis odio
-                            </li>
-                            <li className="package_col-33_liCheck">
-                                <FaCheck className="package_col-33_liCheck_fache"/>
-                                Vitae suspendisse ullamcorper
-                            </li>
+                            {priceData[2]?.benefits?.map((item, index) => (
+                                <li className="package_col-33_liCheck" key={index}>
+
+                                    <FaCheck className="package_col-33_liCheck_fache"/>
+                                    {item?.[`name_${lan}`]}
+                                </li>
+                            ))}
                         </ul>
-                        <a href="#" className="package_col-33_gets">
-                            Get Started
+                        <a href="tel:+48509931555" className="package_col-33_gets">
+                            {t("discover")}
                         </a>
                     </div>
                 </div>
+                <h2 className="bigTitle" style={{marginTop:"50px"}}>{t("table")}</h2>
             </div>
         </div>
     );

@@ -29,7 +29,6 @@ const Feedback = () => {
     if (loading) {
         <Spinner/>
     }
-    console.log(feedBackData)
     return (
         <div className="feedback">
             <div className="container">

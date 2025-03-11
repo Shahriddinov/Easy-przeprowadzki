@@ -12,7 +12,7 @@
       background-position: 50% 15%;
       background-repeat: no-repeat;
       background-size: cover;
-      margin-top: 20px;
+      margin-top: 40px;
       position: relative;
       opacity: 1; // Biroz tiniqlikni oshirish
       z-index: 3;
@@ -35,6 +35,7 @@
         color: $fff-color;
         position: relative;
         z-index: 3;
+        margin-top: 40px;
       }
       &_chatDes {
         position: relative;
@@ -59,7 +60,7 @@
         align-items: center;
         transition: 0.5s;
         gap: 10px;
-        margin-top: 20px;
+        margin-top: 50px;
         &:hover {
           background: #2d984b;
           transition: 0.5s;

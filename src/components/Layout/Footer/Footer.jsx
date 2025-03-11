@@ -109,8 +109,8 @@ function Footer(props) {
 
                                 <div className="bigTitle">{t("have")}</div>
                                 <p>{t("plan")}</p>
-                                <button className="footer_havePlan_hbox_col-8_urlSend">{t("quec")}<IoIosArrowForward
-                                    style={{width: "13px", height: "13px"}}/></button>
+                                <a href="/contact" className="footer_havePlan_hbox_col-8_urlSend">{t("quec")}<IoIosArrowForward
+                                    style={{width: "13px", height: "13px"}}/></a>
                             </div>
                             <div className="footer_havePlan_hbox_col-5">
                                 <img className="footer_havePlan_hbox_col-5_fImg" src={footerImg} alt=""/>
@@ -177,9 +177,9 @@ function Footer(props) {
                                 <div className="footer_Fcard_cols-2_servesLink_iconRight"></div>
                                 +48509931555
                             </a>
-                            <a href="mailto:hello@yourdomain.com" className="footer_Fcard_cols-2_servesLink">
+                            <a href="mailto:easyprzeprowadzka@gmail.com" className="footer_Fcard_cols-2_servesLink">
                                 <div className="footer_Fcard_cols-2_servesLink_iconRight"></div>
-                                hello@yourdomain.com
+                                easyprzeprowadzka@gmail.com
                             </a>
                         </div>
                     </div>

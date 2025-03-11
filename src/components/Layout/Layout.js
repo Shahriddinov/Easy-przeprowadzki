@@ -3,6 +3,8 @@ import Header from "./Header/Header";
 import {Outlet} from "react-router";
 import Footer from "./Footer/Footer";
 import {useLocation} from "react-router";
+import {LuPhoneCall} from "react-icons/lu";
+import { motion } from "framer-motion";
 
 const Layout = (props) => {
     const {children} = props;
@@ -15,12 +17,7 @@ const Layout = (props) => {
         setSpeaker(value);
     };
 
-    const goToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    };
+
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -55,6 +52,29 @@ const Layout = (props) => {
                     <Header speaker={speaker} changeSpeakSwitcher={changeSpeakSwitcher}/>
                 )}
                 <div className="page-content">{children}</div>
+                {showTopBtn && (
+                    <motion.a
+                        className="scrollToHome"
+                        href="tel:+48509931555"
+                        initial={{ scale: 1 }}
+                        animate={{
+                            scale: [1, 1.1, 1], // Tugma kattalashib-kichrayadi
+                        }}
+                        transition={{
+                            duration: 1.5,
+                            repeat: Infinity,
+                            repeatType: "reverse",
+                        }}
+                    >
+
+                        <motion.div
+                            animate={{ scale: [1, 1.3, 1] }} // **📌 Ikonka zoom-in va zoom-out**
+                            transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+                        >
+                            <LuPhoneCall color="white" />
+                        </motion.div>
+                    </motion.a>
+                )}
                 {!isNotFoundRoute && (
                     <Footer/>
                 )}
