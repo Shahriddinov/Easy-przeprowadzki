@@ -51,7 +51,7 @@ const ContactUs = () => {
                                             <div className="d-fl">
                                                 <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +4 (850) 993 15 55</p>
                                                 <p className="d-flex"><AiFillCaretRight
-                                                    style={{fontSize: "12px"}}/>East Przeprowadski </p>
+                                                    style={{fontSize: "12px"}}/>Easy Przeprowadski </p>
                                             </div>
                                         </div>
                                     </div>
@@ -70,7 +70,7 @@ const ContactUs = () => {
                                             <div className="d-fl">
                                                 <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +4 (850) 993 15 55</p>
                                                 <p className="d-flex"><AiFillCaretRight
-                                                    style={{fontSize: "12px"}}/> East Przeprowadski</p>
+                                                    style={{fontSize: "12px"}}/> Easy Przeprowadski</p>
                                             </div>
                                         </div>
                                     </div>

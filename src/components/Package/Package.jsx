@@ -56,7 +56,7 @@ const Package = () => {
                             {priceData[0]?.benefits?.map((item, index) => (
                                 <li className="package_col-33_liCheck" key={index}>
                                     {console.log(item)}
-                                    {item.id === 'bba1325e-acf5-49e7-b2e4-256058c777f9' || item.id === '77cd26ff-546e-4681-9b9f-952856b20d3d' ? (
+                                    {item.id === 'bba1325e-acf5-49e7-b2e4-256058c777f9' || item.id === '43c8a670-5eb4-49ea-ad6e-7ef03648742b' ? (
                                         <RxCrossCircled className="package_col-33_liCheck_fache" style={{color:'red'}} />
                                     ) : (
                                         <FaCheck className="package_col-33_liCheck_fache" />

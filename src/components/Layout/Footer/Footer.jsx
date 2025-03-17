@@ -193,8 +193,7 @@ function Footer(props) {
                         </div>
                         <div className="footer_Fcard_bcol-6">
                             <div className="end">
-                                <a href="#" className="footer_Fcard_bcol-6_police">Copyright © 2024 EazeMove by
-                                    TBWBThemes</a>
+                                <a href="#" className="footer_Fcard_bcol-6_police">Copyright © 2025 Easy Przeprowadzki</a>
 
                             </div>
                         </div>
