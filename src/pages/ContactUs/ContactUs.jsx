@@ -30,9 +30,9 @@ const ContactUs = () => {
                                         <div>
                                             <h2 className="contact_col-55_information_callIcons_callsText_res">Instagram</h2>
                                             <div className="d-fl">
-                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +4 (850) 993 15 55</p>
+                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +48 509 93 15 55</p>
                                                 <p className="d-flex"><AiFillCaretRight
-                                                    style={{fontSize: "12px"}}/> easyprzeprowadski.pl</p>
+                                                    style={{fontSize: "12px"}}/> easyprzeprowadzki.pl</p>
                                             </div>
                                         </div>
                                     </div>
@@ -49,9 +49,9 @@ const ContactUs = () => {
                                         <div>
                                             <h2 className="contact_col-55_information_callIcons_callsText_res">Facebook</h2>
                                             <div className="d-fl">
-                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +4 (850) 993 15 55</p>
+                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +48 509 93 15 55</p>
                                                 <p className="d-flex"><AiFillCaretRight
-                                                    style={{fontSize: "12px"}}/>Easy Przeprowadski </p>
+                                                    style={{fontSize: "12px"}}/>Easy Przeprowadzki </p>
                                             </div>
                                         </div>
                                     </div>
@@ -68,9 +68,9 @@ const ContactUs = () => {
                                         <div>
                                             <h2 className="contact_col-55_information_callIcons_callsText_res">WhatsApp</h2>
                                             <div className="d-fl">
-                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +4 (850) 993 15 55</p>
+                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +48 509 93 15 55</p>
                                                 <p className="d-flex"><AiFillCaretRight
-                                                    style={{fontSize: "12px"}}/> Easy Przeprowadski</p>
+                                                    style={{fontSize: "12px"}}/> Easy Przeprowadzki</p>
                                             </div>
                                         </div>
                                     </div>
