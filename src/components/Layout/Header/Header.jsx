@@ -3,7 +3,7 @@ import { FaPhoneAlt, FaMapMarkedAlt } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import logo from "../../../assets/images/1.png";
+import logo from "../../../assets/images/logo.svg";
 import { Link } from "react-router";
 import Language from "../../Language/language";
 import { useTranslation } from "react-i18next";

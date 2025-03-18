@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {IoIosArrowForward} from "react-icons/io";
 import footerImg from "../../../assets/images/Footer.png";
-import one from "../../../assets/images/1.png";
+import one from "../../../assets/images/logo.svg";
 import {BiSupport} from "react-icons/bi";
 import {AiFillCaretRight} from "react-icons/ai";
 import {useTranslation} from "react-i18next";
@@ -193,8 +193,7 @@ function Footer(props) {
                         </div>
                         <div className="footer_Fcard_bcol-6">
                             <div className="end">
-                                <a href="#" className="footer_Fcard_bcol-6_police">Copyright © 2024 EazeMove by
-                                    TBWBThemes</a>
+                                <a href="#" className="footer_Fcard_bcol-6_police">Copyright © 2025 Easy Przeprowadzki</a>
 
                             </div>
                         </div>
