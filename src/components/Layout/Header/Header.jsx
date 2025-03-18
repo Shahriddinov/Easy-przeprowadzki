@@ -102,20 +102,21 @@ function Header(props) {
                   </button>
                 </li>
                 <li className="header_navbar_nav_list-10_menu_items">
-                  <Link to="/">{t("main")}</Link>
-                </li>
-                <li className="header_navbar_nav_list-10_menu_items">
-                  <Link to="/about">{t("about")}</Link>
-                </li>
-                <li className="header_navbar_nav_list-10_menu_items">
-                  <Link to="/services">{t("services")}</Link>
-                </li>
-                <li className="header_navbar_nav_list-10_menu_items">
-                  <Link to="/price">{t("price")}</Link>
-                </li>
-                <li className="header_navbar_nav_list-10_menu_items">
-                  <Link to="contact">{t("contact")}</Link>
-                </li>
+  <Link to="/" onClick={() => setSheet(false)}>{t("main")}</Link>
+</li>
+<li className="header_navbar_nav_list-10_menu_items">
+  <Link to="/about" onClick={() => setSheet(false)}>{t("about")}</Link>
+</li>
+<li className="header_navbar_nav_list-10_menu_items">
+  <Link to="/services" onClick={() => setSheet(false)}>{t("services")}</Link>
+</li>
+<li className="header_navbar_nav_list-10_menu_items">
+  <Link to="/price" onClick={() => setSheet(false)}>{t("price")}</Link>
+</li>
+<li className="header_navbar_nav_list-10_menu_items">
+  <Link to="/contact" onClick={() => setSheet(false)}>{t("contact")}</Link>
+</li>
+
                 <li className="header_navbar_nav_list-10_menu_items ">
                   <Language />
                   
