@@ -5,7 +5,6 @@ import { toast } from "react-toastify";
 
 export const sendMessage = createAsyncThunk("message/post", async (sendDataMessage, { rejectWithValue }) => {
     try {
-        // x-www-form-urlencoded formatiga o‘tkazish
         const formData = new URLSearchParams();
         Object.keys(sendDataMessage).forEach((key) => {
             formData.append(key, sendDataMessage[key]);
