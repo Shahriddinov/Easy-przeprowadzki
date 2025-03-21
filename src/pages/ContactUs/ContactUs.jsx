@@ -1,15 +1,33 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import "./contact.scss";
 import PageHero from "../../components/PageHero";
-import { FiFacebook } from "react-icons/fi";
+import {FiFacebook} from "react-icons/fi";
 import {AiFillCaretRight} from "react-icons/ai";
-import { FaWhatsapp } from "react-icons/fa6";
+import {FaWhatsapp} from "react-icons/fa6";
 import {IoIosGlobe} from "react-icons/io";
 import {useTranslation} from "react-i18next";
-import { GrInstagram } from "react-icons/gr";
+import {GrInstagram} from "react-icons/gr";
+import {useDispatch, useSelector} from "react-redux";
+import {sendMessage} from "../../reduxToolkit/MessageSlice";
 
 const ContactUs = () => {
     const {t} = useTranslation();
+    const dispatch = useDispatch();
+    const formRef = useRef();
+    const loading = useSelector((state) => state.messageSlice.loading);
+    const messageData = useSelector((state) => state.messageSlice.messageData);
+    const [sendDataMessage, setSendDataMessage] = useState({
+        name: "",
+        phone: "",
+        subject: "",
+        message: "",
+        email: "",
+    });
+    const handleSumbit = (e) => {
+        e.preventDefault();
+        dispatch(sendMessage(sendDataMessage));
+        formRef.current.reset();
+    };
     const title = `${t("contactUs")}`;
     return (
         <>
@@ -30,14 +48,16 @@ const ContactUs = () => {
                                         <div>
                                             <h2 className="contact_col-55_information_callIcons_callsText_res">Instagram</h2>
                                             <div className="d-fl">
-                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +48 509 93 15 55</p>
+                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +48
+                                                    509 93 15 55</p>
                                                 <p className="d-flex"><AiFillCaretRight
                                                     style={{fontSize: "12px"}}/> easyprzeprowadzki.pl</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="https://www.instagram.com/easyprzeprowadski.pl/" target="_blank" className="contact_col-55_information_gets">{t("queto")}</a>
+                                <a href="https://www.instagram.com/easyprzeprowadski.pl/" target="_blank"
+                                   className="contact_col-55_information_gets">{t("queto")}</a>
                             </div>
                             <div className="contact_col-55_information">
                                 <div className="contact_col-55_information_callIcons">
@@ -49,14 +69,16 @@ const ContactUs = () => {
                                         <div>
                                             <h2 className="contact_col-55_information_callIcons_callsText_res">Facebook</h2>
                                             <div className="d-fl">
-                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +48 509 93 15 55</p>
+                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +48
+                                                    509 93 15 55</p>
                                                 <p className="d-flex"><AiFillCaretRight
                                                     style={{fontSize: "12px"}}/>Easy Przeprowadzki </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="https://www.facebook.com/profile.php?id=61574070050784" target="_blank" className="contact_col-55_information_gets">{t("queto")}</a>
+                                <a href="https://www.facebook.com/profile.php?id=61574070050784" target="_blank"
+                                   className="contact_col-55_information_gets">{t("queto")}</a>
                             </div>
                             <div className="contact_col-55_information">
                                 <div className="contact_col-55_information_callIcons">
@@ -68,29 +90,45 @@ const ContactUs = () => {
                                         <div>
                                             <h2 className="contact_col-55_information_callIcons_callsText_res">WhatsApp</h2>
                                             <div className="d-fl">
-                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +48 509 93 15 55</p>
+                                                <p className="d-flex"><AiFillCaretRight style={{fontSize: "12px"}}/> +48
+                                                    509 93 15 55</p>
                                                 <p className="d-flex"><AiFillCaretRight
                                                     style={{fontSize: "12px"}}/> Easy Przeprowadzki</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="https://web.whatsapp.com/" className="contact_col-55_information_gets">{t("queto")}</a>
+                                <a href="https://web.whatsapp.com/"
+                                   className="contact_col-55_information_gets">{t("queto")}</a>
                             </div>
                         </div>
                         <div className="contact_col-45">
                             <div className="contact_col-45_sizeDefault">{t("send")}</div>
-                            <form>
+                            <form
+                                ref={formRef}
+                                onSubmit={handleSumbit}>
                                 <div className="form-group">
                                     <div className="form-control">
                                         <label htmlFor="name" className="form-list">{t("name")}</label>
                                         <input name="name" id="name" type="text" placeholder={t("name")}
-                                               className="form-input"/>
+                                               className="form-input"
+                                               onChange={(e) =>
+                                                   setSendDataMessage((prev) => ({
+                                                       ...prev,
+                                                       name: e.target.value,
+                                                   }))
+                                               }/>
                                     </div>
                                     <div className="form-control">
                                         <label htmlFor="phone" className="form-list">{t("phone")}</label>
-                                        <input name="phone" id="phone" type="number" placeholder={t("phone")}
-                                               className="form-input"/>
+                                        <input name="phone" id="phone" type="number"  placeholder={t("phone")}
+                                               className="form-input"
+                                               onChange={(e) =>
+                                                   setSendDataMessage((prev) => ({
+                                                       ...prev,
+                                                       phone: e.target.value,
+                                                   }))
+                                               }/>
                                     </div>
 
                                 </div>
@@ -98,19 +136,37 @@ const ContactUs = () => {
                                     <div className="form-control">
                                         <label htmlFor="email" className="form-list">{t("email")}</label>
                                         <input name="email" id="email" type="email" placeholder={t("email")}
-                                               className="form-input"/>
+                                               className="form-input"
+                                               onChange={(e) =>
+                                                   setSendDataMessage((prev) => ({
+                                                       ...prev,
+                                                       email: e.target.value,
+                                                   }))
+                                               }/>
                                     </div>
                                     <div className="form-control">
                                         <label htmlFor="subject" className="form-list">{t("subject")} </label>
                                         <input name="subject" id="subject" type="text" placeholder={t("subject")}
-                                               className="form-input"/>
+                                               className="form-input"
+                                               onChange={(e) =>
+                                                   setSendDataMessage((prev) => ({
+                                                       ...prev,
+                                                       subject: e.target.value,
+                                                   }))
+                                               }/>
                                     </div>
 
                                 </div>
                                 <div className="form-control" style={{width: '100%'}}>
                                     <label htmlFor="message" className="form-list">{t("message")}</label>
                                     <textarea name="message" id="message" placeholder={t("message")}
-                                              className="form-textarea"/>
+                                              className="form-textarea"
+                                              onChange={(e) =>
+                                                  setSendDataMessage((prev) => ({
+                                                      ...prev,
+                                                      message: e.target.value,
+                                                  }))
+                                              }/>
                                 </div>
                                 <button type="submit" className="sendForm">{t("sendM")}</button>
                             </form>
@@ -126,7 +182,7 @@ const ContactUs = () => {
                             <div className="contact_local_places">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2214.005727061684!2d20.97491907617065!3d52.178766161438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4719333dc1783d07%3A0xf2c0a47167d23e13!2sKomitetu%20Obrony%20Robotnik%C3%B3w%2039C%2C%2002-148%20Warszawa%2C%20Poland!5e1!3m2!1sen!2s!4v1740336096848!5m2!1sen!2s"
-                                    width="100%" height="600" style={{border:"0"}} allowFullScreen="" loading="lazy"
+                                    width="100%" height="600" style={{border: "0"}} allowFullScreen="" loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>

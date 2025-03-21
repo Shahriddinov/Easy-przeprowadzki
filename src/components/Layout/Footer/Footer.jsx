@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {IoIosArrowForward} from "react-icons/io";
 import footerImg from "../../../assets/images/Footer.png";
-import one from "../../../assets/images/logo.svg";
+import one from "../../../assets/images/image.svg";
 import {BiSupport} from "react-icons/bi";
 import {AiFillCaretRight} from "react-icons/ai";
 import {useTranslation} from "react-i18next";
@@ -109,7 +109,7 @@ function Footer(props) {
 
                                 <div className="bigTitle">{t("have")}</div>
                                 <p>{t("plan")}</p>
-                                <a href="/contact" className="footer_havePlan_hbox_col-8_urlSend">{t("quec")}<IoIosArrowForward
+                                <a href="tel:+48509931555" className="footer_havePlan_hbox_col-8_urlSend">{t("quec")}<IoIosArrowForward
                                     style={{width: "13px", height: "13px"}}/></a>
                             </div>
                             <div className="footer_havePlan_hbox_col-5">

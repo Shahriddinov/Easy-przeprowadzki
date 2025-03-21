@@ -7,6 +7,7 @@ import heroSlice from "./HeroSlice/heroSlice";
 import aboutSlice from "./AboutSlice/AboutSlice";
 import feedBackSlice from "./FeedBackSlice/feedBackSlice";
 import pricingSlice from "./PricingSlice/pricingSlice";
+import messageSlice from "./MessageSlice/MessageSlice";
 
 const store = configureStore({
     reducer: {
@@ -15,7 +16,8 @@ const store = configureStore({
         heroSlice,
         aboutSlice,
         feedBackSlice,
-        pricingSlice
+        pricingSlice,
+        messageSlice
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({

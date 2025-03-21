@@ -65,7 +65,7 @@ const Services = () => {
                                         {service[`description_${lan}`]}
                                     </p>
                                     <div className="d-flex">
-                                        <a href="#" className="href">
+                                        <a href="tel:+48509931555" className="href">
                                             Learn More
                                             <IoMdArrowDropright/>
 
