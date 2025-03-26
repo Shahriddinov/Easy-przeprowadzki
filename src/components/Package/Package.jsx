@@ -15,7 +15,11 @@ const Package = () => {
     const lan = useSelector((state) => state.language.language);
     const loading = useSelector((state) => state.pricingSlice.loading);
     const priceData = useSelector((state) => state.pricingSlice.priceData);
+    const selectedPackage = priceData.find(item => item.id === "d5e64c9e-9ff9-4d44-99e8-94b1af403e8c");
+    const selectedPackagePro = priceData.find(item => item.id === "1ce763c5-7d90-470d-83df-1d4dae895c29");
+    const selectedPackageProPlus = priceData.find(item => item.id === "1ce763c5-7d90-470d-83df-1d4dae895c29");
 
+    const benefitIndexes = [5, 4, 3, 2, 0, 1];
 
     useEffect(() => {
         dispatch(getPricing());
@@ -48,22 +52,45 @@ const Package = () => {
 
                         <div className="package_col-33_dollar">
                             <h2 className="package_col-33_dollar_IconD">zł/h</h2>
-                            <h2 className="package_col-  33_dollar_dprice"> {String(priceData[1]?.price).replace(/(\d{3})(?=\d)/, '$1-')}</h2>
+                            <h2 className="package_col-33_dollar_dprice"> {String(priceData[1]?.price).replace(/(\d{3})(?=\d)/, '$1-')}</h2>
                         </div>
                         <h2 className="package_col-33_month">{t("person1")}</h2>
 
                         <ul>
-                            {priceData[0]?.benefits?.map((item, index) => (
-                                <li className="package_col-33_liCheck" key={index}>
-                                    {item.id === 'bba1325e-acf5-49e7-b2e4-256058c777f9' || item.id === '43c8a670-5eb4-49ea-ad6e-7ef03648742b' ? (
-                                        <RxCrossCircled className="package_col-33_liCheck_fache" style={{color:'red'}} />
-                                    ) : (
-                                        <FaCheck className="package_col-33_liCheck_fache" />
-                                    )}
-                                    {item?.[`name_${lan}`]}
-                                </li>
-                            ))}
+                            {/*<li className="package_col-33_liCheck">{priceData[0]?.benefits?.[5][`name_${lan}`]}</li>*/}
+                            {/*<li className="package_col-33_liCheck">{priceData[0]?.benefits?.[4][`name_${lan}`]}</li>*/}
+                            {/*<li className="package_col-33_liCheck">{priceData[0]?.benefits?.[3][`name_${lan}`]}</li>*/}
+                            {/*<li className="package_col-33_liCheck">{priceData[0]?.benefits?.[2][`name_${lan}`]}</li>*/}
+                            {/*<li className="package_col-33_liCheck">{priceData[0]?.benefits?.[0][`name_${lan}`]}</li>*/}
+                            {/*<li className="package_col-33_liCheck">{priceData[0]?.benefits?.[1][`name_${lan}`]}</li>*/}
+                            {benefitIndexes.map((index) => {
+                                const item = selectedPackage?.benefits?.[index];
 
+                                return (
+                                    <li className="package_col-33_liCheck" key={index}>
+                                        {(String(item?.id) === "2" || String(item?.id) === "4" || String(item?.id) === "3") ? (
+                                            <RxCrossCircled className="package_col-33_liCheck_fache" style={{ color: "red" }} />
+                                        ) : (
+                                            <FaCheck className="package_col-33_liCheck_fache" />
+                                        )}
+                                        {item?.[`name_${lan}`]}
+                                    </li>
+                                );
+                            })}
+                            {/*{[5, 4, 3, 2, 0, 1].map((index) => {*/}
+                            {/*    const item = priceData[0]?.benefits?.[index];*/}
+                            {/*    return (*/}
+                            {/*        <li className="package_col-33_liCheck" key={index}>*/}
+                            {/*            {console.log(item?.id)}*/}
+                            {/*            {(item?.id === 5 || item?.id === 4 || item?.id === 3) ? (*/}
+                            {/*                <RxCrossCircled className="package_col-33_liCheck_fache" style={{ color: "red" }} />*/}
+                            {/*            ) : (*/}
+                            {/*                <FaCheck className="package_col-33_liCheck_fache" />*/}
+                            {/*            )}*/}
+                            {/*            {item?.[`name_${lan}`]}*/}
+                            {/*        </li>*/}
+                            {/*    );*/}
+                            {/*})}*/}
 
 
                         </ul>
@@ -85,16 +112,20 @@ const Package = () => {
                         <h2 className="package_col-33_month dd">{t("person2")}</h2>
 
                         <ul>
-                            {priceData[0]?.benefits?.map((item, index) => (
-                                <li className="package_col-33_liCheck" key={index}>
-                                    {item.id === 'bba1325e-acf5-49e7-b2e4-256058c777f9' ? (
-                                        <RxCrossCircled className="package_col-33_liCheck_fache" style={{color:'red'}} />
-                                    ) : (
-                                        <FaCheck className="package_col-33_liCheck_fache" />
-                                    )}
-                                    {item?.[`name_${lan}`]}
-                                </li>
-                            ))}
+                            {benefitIndexes.map((index) => {
+                                const item = selectedPackagePro?.benefits?.[index];
+
+                                return (
+                                    <li className="package_col-33_liCheck" key={index}>
+                                        {String(item?.id) === "2" ? (
+                                            <RxCrossCircled className="package_col-33_liCheck_fache" style={{ color: "red" }} />
+                                        ) : (
+                                            <FaCheck className="package_col-33_liCheck_fache" />
+                                        )}
+                                        {item?.[`name_${lan}`]}
+                                    </li>
+                                );
+                            })}
 
                         </ul>
                         <a href="tel:+48509931555" className="package_col-33_gets bbb">
@@ -113,13 +144,17 @@ const Package = () => {
                         <h2 className="package_col-33_month">{t("person3")}</h2>
 
                         <ul>
-                            {priceData[2]?.benefits?.map((item, index) => (
-                                <li className="package_col-33_liCheck" key={index}>
+                            {benefitIndexes.map((index) => {
+                                const item = selectedPackageProPlus?.benefits?.[index];
 
-                                    <FaCheck className="package_col-33_liCheck_fache"/>
-                                    {item?.[`name_${lan}`]}
-                                </li>
-                            ))}
+                                return (
+                                    <li className="package_col-33_liCheck" key={index}>
+                                        <FaCheck className="package_col-33_liCheck_fache" />
+                                        {item?.[`name_${lan}`]}
+                                    </li>
+                                );
+                            })}
+
                         </ul>
                         <a href="tel:+48509931555" className="package_col-33_gets">
                             {t("discover")}

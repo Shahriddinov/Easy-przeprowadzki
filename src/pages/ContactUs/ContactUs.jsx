@@ -77,7 +77,7 @@ const ContactUs = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <a href="https://www.facebook.com/profile.php?id=61574070050784" target="_blank"
+                                <a href="https://www.facebook.com/people/Easy-Przeprowadzki/61574572778465/?mibextid=wwXIfr&rdid=rIsE3tnrzelpS1gc&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1E1FMHm5tS%2F%3Fmibextid%3DwwXIfr" target="_blank"
                                    className="contact_col-55_information_gets">{t("queto")}</a>
                             </div>
                             <div className="contact_col-55_information">
