@@ -57,12 +57,7 @@ const Package = () => {
                         <h2 className="package_col-33_month">{t("person1")}</h2>
 
                         <ul>
-                            {/*<li className="package_col-33_liCheck">{priceData[0]?.benefits?.[5][`name_${lan}`]}</li>*/}
-                            {/*<li className="package_col-33_liCheck">{priceData[0]?.benefits?.[4][`name_${lan}`]}</li>*/}
-                            {/*<li className="package_col-33_liCheck">{priceData[0]?.benefits?.[3][`name_${lan}`]}</li>*/}
-                            {/*<li className="package_col-33_liCheck">{priceData[0]?.benefits?.[2][`name_${lan}`]}</li>*/}
-                            {/*<li className="package_col-33_liCheck">{priceData[0]?.benefits?.[0][`name_${lan}`]}</li>*/}
-                            {/*<li className="package_col-33_liCheck">{priceData[0]?.benefits?.[1][`name_${lan}`]}</li>*/}
+
                             {benefitIndexes.map((index) => {
                                 const item = selectedPackage?.benefits?.[index];
 
@@ -77,21 +72,6 @@ const Package = () => {
                                     </li>
                                 );
                             })}
-                            {/*{[5, 4, 3, 2, 0, 1].map((index) => {*/}
-                            {/*    const item = priceData[0]?.benefits?.[index];*/}
-                            {/*    return (*/}
-                            {/*        <li className="package_col-33_liCheck" key={index}>*/}
-                            {/*            {console.log(item?.id)}*/}
-                            {/*            {(item?.id === 5 || item?.id === 4 || item?.id === 3) ? (*/}
-                            {/*                <RxCrossCircled className="package_col-33_liCheck_fache" style={{ color: "red" }} />*/}
-                            {/*            ) : (*/}
-                            {/*                <FaCheck className="package_col-33_liCheck_fache" />*/}
-                            {/*            )}*/}
-                            {/*            {item?.[`name_${lan}`]}*/}
-                            {/*        </li>*/}
-                            {/*    );*/}
-                            {/*})}*/}
-
 
                         </ul>
                         <a href="tel:+48509931555" className="package_col-33_gets">
