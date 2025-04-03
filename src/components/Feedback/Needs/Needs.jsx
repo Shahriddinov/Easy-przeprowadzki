@@ -12,7 +12,7 @@ const Needs = () => {
                         {t("need")}
                     </div>
                     <p className="colo">{t("needDes")}</p>
-                    <button className="discover">{t("discover")}</button>
+                    <a href="/price" className="discover">{t("discover")}</a>
 
                 </div>
             </div>

@@ -25,7 +25,7 @@ const MoveNeeds = () => {
                 </div>
                 <p className="moveNeeds_bgc_centerText" data-aos="fade-up">{t("needDes")}</p>
                 <div className="d-flex">
-                    <a href="#" className="moveNeeds_bgc_centerSend" data-aos="flip-left">{t("get")}</a>
+                    <a href="tel:+48509931555" className="moveNeeds_bgc_centerSend" data-aos="flip-left">{t("get")}</a>
                 </div>
             </div>
 
