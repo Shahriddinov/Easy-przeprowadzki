@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9f10b293.css",
+    "main.js": "/static/js/main.91fe1927.js",
+    "static/css/879.3286bc7f.chunk.css": "/static/css/879.3286bc7f.chunk.css",
+    "static/js/879.b460915d.chunk.js": "/static/js/879.b460915d.chunk.js",
+    "static/css/888.22fb6e61.chunk.css": "/static/css/888.22fb6e61.chunk.css",
+    "static/js/888.a5121748.chunk.js": "/static/js/888.a5121748.chunk.js",
+    "static/css/321.dc1cb676.chunk.css": "/static/css/321.dc1cb676.chunk.css",
+    "static/js/321.84548183.chunk.js": "/static/js/321.84548183.chunk.js",
+    "static/css/463.bcafb93b.chunk.css": "/static/css/463.bcafb93b.chunk.css",
+    "static/js/463.c853998e.chunk.js": "/static/js/463.c853998e.chunk.js",
+    "static/css/770.6bc6e8c1.chunk.css": "/static/css/770.6bc6e8c1.chunk.css",
+    "static/js/770.73b20e7d.chunk.js": "/static/js/770.73b20e7d.chunk.js",
+    "static/js/591.bd2b77f3.chunk.js": "/static/js/591.bd2b77f3.chunk.js",
+    "static/js/350.181ce5cf.chunk.js": "/static/js/350.181ce5cf.chunk.js",
+    "static/css/524.2698ffa6.chunk.css": "/static/css/524.2698ffa6.chunk.css",
+    "static/js/524.4c214742.chunk.js": "/static/js/524.4c214742.chunk.js",
+    "static/js/351.000371aa.chunk.js": "/static/js/351.000371aa.chunk.js",
+    "static/media/choose.jpg": "/static/media/choose.f8358c5a530f95d78663.jpg",
+    "static/media/about.jpg": "/static/media/about.7da2e506a36e42942d2e.jpg",
+    "static/media/we2.jpg": "/static/media/we2.df4fad8650dfc5fffbb2.jpg",
+    "static/media/image.svg": "/static/media/image.90d3a383a7b38130dc656819ca7e1eae.svg",
+    "static/media/contact.jpg": "/static/media/contact.d83336fa91b6ef979d3b.jpg",
+    "static/media/404.jpg": "/static/media/404.d537ad60a7a334966103.jpg",
+    "static/media/default.jpg": "/static/media/default.ced0cf96395e9de42111.jpg",
+    "static/media/BG2.jpg": "/static/media/BG2.278096fd16a020ffea51.jpg",
+    "static/media/hero4.jpg": "/static/media/hero4.defa715fa533702e4e1e.jpg",
+    "static/media/we1.jpg": "/static/media/we1.739a51fa6707f231b25a.jpg",
+    "static/media/we3.jpg": "/static/media/we3.c71130b3bc2ffbd08a87.jpg",
+    "static/media/about1.jpg": "/static/media/about1.65432c66ee0546a5d44c.jpg",
+    "static/media/Footer.png": "/static/media/Footer.263badc309023a98871a.png",
+    "static/media/services.jpg": "/static/media/services.705665a3cf4d8be8b7b5.jpg",
+    "static/media/1111.jpg": "/static/media/1111.b025e6ffb2b9440ba179.jpg",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.9f10b293.css",
+    "static/js/main.91fe1927.js"
+  ]
+}
