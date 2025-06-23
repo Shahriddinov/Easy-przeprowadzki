@@ -43,7 +43,7 @@ const Services = () => {
                 <div className="services_cards">
                     <div className="row" style={{flexWrap:"wrap"}}>
                         {servicesData.map((service, index) => (
-                            <div className="services_cards_col-3"  data-aos={
+                            <div className="services_cards_col-3" data-aos={
                                 index % 3 === 0
                                     ? 'fade-right'
                                     : index % 3 === 1

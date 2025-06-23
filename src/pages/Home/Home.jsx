@@ -8,14 +8,17 @@ import Package from "../../components/Package/Package";
 import MoveNeeds from "../../components/MoveNeeds/MoveNeeds";
 
 const Home = () => {
+
     return (
-        <div>
+        <div style={{overflow:"hidden"}}>
             <Hero/>
+             <Services/>
+              <ChooseUs/>
             <WeAre/>
             <MoveNeeds/>
-            <Services/>
+           
             <Package/>
-            <ChooseUs/>
+           
             <Feedback/>
         </div>
     );

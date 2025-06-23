@@ -18,10 +18,10 @@
     &_title {
       color: $fff-color;
       font-weight: 800;
-      line-height: 1.1em;
+      line-height: 55px;
       letter-spacing: -1.5px;
       text-transform: capitalize;
-      font-size: clamp(2.375rem, 1.8125rem + 2.5vw, 3.8125rem);
+      font-size: 38px;
       margin-bottom: 10px;
     }
     &_text {
@@ -54,6 +54,7 @@
   }
   &_carousel {
     &_wrapper {
+      height: 100vh;
       position: relative !important;
       z-index: 1;
       display: flex !important;
@@ -76,6 +77,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        object-fit: cover;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -100,6 +102,7 @@
   }
   @media (max-width: 768px) {
     height: 65vh;
+
     &_desc {
       top: 60%;
       width: 90%;

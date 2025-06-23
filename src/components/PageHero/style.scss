@@ -1,7 +1,7 @@
 @import "../../assets/style/global";
 
 .pageHero {
-  height: 95vh;
+  height: 100vh;
   overflow: hidden;
   position: relative;
   opacity: 1; // Biroz tiniqlikni oshirish
@@ -27,7 +27,7 @@
     }
 
     &_pageUrl {
-      padding-top: 20%;
+      padding-top: 30%;
       display: flex;
       gap: 10px;
       align-items: center;

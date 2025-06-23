@@ -10,8 +10,11 @@ import {Provider} from "react-redux";
 import i18n from "./Services/in18";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { CookiesProvider } from "react-cookie";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+    <CookiesProvider>
     <I18nextProvider i18n={i18n}>
         <Suspense fallback="">
             <Provider store={store}>
@@ -20,4 +23,5 @@ root.render(
             </Provider>
         </Suspense>
     </I18nextProvider>
+    </CookiesProvider>
 );

@@ -39,7 +39,7 @@ const Hero = () => {
     return (
         <div className="hero">
             <div className="hero_desc">
-                <h1 className="hero_desc_title" data-aos="fade-up">{t("weTake")}</h1>
+                <h1 className="hero_desc_title" data-aos="fade-up">Przeprowadzki Warszawa</h1>
                 <p className="hero_desc_text">{t("prDes")}</p>
                 <a href="/price" className="hero_desc_sends">{t("discover")}<IoIosArrowForward
                     style={{width: "13px", height: "13px"}}/></a>
