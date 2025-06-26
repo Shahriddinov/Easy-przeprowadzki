@@ -109,6 +109,45 @@ p{
     opacity: 0;
   }
 }
+// global.scss
+
+.cookie-banner-animated {
+   z-index: 9999;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #2B373B;
+  color: #fff;
+  font-size: 14px;
+  padding: 15px;
+  text-align: center;
+  animation: slideUp 0.7s ease-out;
+
+  .cookie-button {
+    background-color: #00a86b;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 13px;
+
+    &:hover {
+      background-color: #007a52;
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
 
 ul, ol {
   list-style: none;

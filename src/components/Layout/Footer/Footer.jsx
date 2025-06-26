@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {IoIosArrowForward} from "react-icons/io";
 import footerImg from "../../../assets/images/Footer.png";
-import one from "../../../assets/images/image.svg";
+import one from "../../../assets/images/Easy.jpg";
 import {BiSupport} from "react-icons/bi";
 import {AiFillCaretRight} from "react-icons/ai";
 import {useTranslation} from "react-i18next";
@@ -173,9 +173,9 @@ function Footer(props) {
                                 </div>
                                 Komitetu Obrony Robotników 39C
                             </a>
-                            <a href="tel:+48509931555" className="footer_Fcard_cols-2_servesLink">
+                            <a className="footer_Fcard_cols-2_servesLink">
                                 <div className="footer_Fcard_cols-2_servesLink_iconRight"></div>
-                                +48509931555
+                               NIP: 5273166825
                             </a>
                             <a href="mailto:easyprzeprowadzka@gmail.com" className="footer_Fcard_cols-2_servesLink">
                                 <div className="footer_Fcard_cols-2_servesLink_iconRight"></div>

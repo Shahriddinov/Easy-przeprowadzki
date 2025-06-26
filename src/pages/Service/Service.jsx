@@ -13,8 +13,6 @@ const Service = () => {
     const servicesData = useSelector((state) => state.servicesSlice.servicesData);
     const title=`${t("services")}`;
     const description = `${t("srDes")}`;
-
-    console.log(servicesData)
     return (
         <>
             <PageHero title={title} description={description} />

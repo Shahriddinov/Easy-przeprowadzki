@@ -4,7 +4,6 @@ import PageHero from "../../components/PageHero";
 import {FiFacebook} from "react-icons/fi";
 import {AiFillCaretRight} from "react-icons/ai";
 import {FaWhatsapp} from "react-icons/fa6";
-import {IoIosGlobe} from "react-icons/io";
 import {useTranslation} from "react-i18next";
 import {GrInstagram} from "react-icons/gr";
 import {useDispatch, useSelector} from "react-redux";

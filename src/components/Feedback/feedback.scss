@@ -3,6 +3,7 @@
 .feedback {
   background: #f6f6f6;
   padding: 7em 1em 6em;
+  overflow-x: hidden;
   &_fdes {
     width: 60%;
     display: flex;
