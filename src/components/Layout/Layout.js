@@ -4,10 +4,12 @@ import { useCookies } from "react-cookie";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import { LuPhoneCall } from "react-icons/lu";
-import { motion } from "framer-motion";
+
 import "./cookieBanner.scss"; // SCSS ulash
+import {useTranslation} from "react-i18next";
 
 const Layout = () => {
+   const {t} = useTranslation();
   const { pathname } = useLocation();
   const [cookies, setCookie] = useCookies(["myCookieConsent"]);
   const [showBanner, setShowBanner] = useState(false);
@@ -42,31 +44,24 @@ const Layout = () => {
         <Outlet />
       </div>
       {showTopBtn && (
-        <motion.a
+        <a
           className="scrollToHome"
-          href="tel:+48509931555"
-          initial={{ scale: 1 }}
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
-        >
-          <motion.div
-            animate={{ scale: [1, 1.3, 1] }}
-            transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
-          >
+          href="tel:+48509931555">
+          
             <LuPhoneCall color="white" />
-          </motion.div>
-        </motion.a>
+            509931555
+        
+        </a>
       )}
       <Footer />
 
       {showBanner && (
         <div className="cookie-banner-animated">
           <span>
-            Ushbu sayt foydalanuvchi tajribasini yaxshilash uchun cookie’lardan
-            foydalaniladi.
+            {t("cookies")}
           </span>
           <button className="cookie-button" onClick={acceptCookies}>
-            Roziman
+           
           </button>
         </div>
       )}

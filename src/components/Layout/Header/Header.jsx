@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from "react";
-import {FaPhoneAlt, FaFacebookSquare, FaInstagram, FaWhatsapp, FaTwitter} from "react-icons/fa";
+import {FaPhoneAlt, FaFacebookSquare, FaInstagram, FaWhatsapp} from "react-icons/fa";
 import {IoLocation} from "react-icons/io5";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import logo from "../../../assets/images/300.png";
-import logoTwo from "../../../assets/images/logo EP-06.png";
 import {Link} from "react-router";
 import Language from "../../Language/language";
 import {useTranslation} from "react-i18next";
@@ -67,18 +66,18 @@ function Header(props) {
                                      </div> */}
                                      <div className="header_head_linkContact_col-2_right-social">
                                         
-                                    <a href="#" className="social-icon" target="_blank">
+                                    <a href="https://www.facebook.com/people/Easy-Przeprowadzki/61574572778465/?mibextid=wwXIfr&rdid=rIsE3tnrzelpS1gc&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1E1FMHm5tS%2F%3Fmibextid%3DwwXIfr" className="social-icon" target="_blank">
                                         <FaFacebookSquare/>
                                     </a>
                                     </div>
                                     <div className="header_head_linkContact_col-2_right-social">
-                                    <a href="#" className="social-icon" target="_blank">
+                                    <a href="https://www.instagram.com/easy_przeprowadzki_pl?igsh=aGQyMDFiaWV5cHp6&utm_source=qr" className="social-icon" target="_blank">
                                         <FaInstagram/>
                                     </a>
                                     </div>
                                     
                                     <div className="header_head_linkContact_col-2_right-social">
-                                    <a href="#" className="social-icon" target="_blank">
+                                    <a href="tel:+48509 93 15 55" className="social-icon" target="_blank">
                                         <FaWhatsapp/>
                                     </a>
                                </div>
