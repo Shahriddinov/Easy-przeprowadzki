@@ -177,7 +177,7 @@
         }
 
         .header_navbar_nav_list-10_hamburger svg {
-          color: $fff-color;
+          color: #4ecb71;
         }
       }
       &_nav {
@@ -202,7 +202,8 @@
             svg {
               width: 30px;
               height: 26px;
-              color: #fff;
+              color: #4ecb71;
+              z-index: 1000;
             }
             background-color: transparent;
           }
