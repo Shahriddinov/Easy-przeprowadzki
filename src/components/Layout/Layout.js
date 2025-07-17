@@ -61,7 +61,7 @@ const Layout = () => {
             {t("cookies")}
           </span>
           <button className="cookie-button" onClick={acceptCookies}>
-           
+            {t("accep")}
           </button>
         </div>
       )}
