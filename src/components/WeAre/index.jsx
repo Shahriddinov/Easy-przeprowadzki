@@ -66,7 +66,7 @@ const WeAre = () => {
                             {/*       data-aos="fade-up">{item[`quote_${lan}`]}</p>*/}
                             {/*</div>*/}
                             {/*<p className="weAre_col-6_ps" data-aos="fade-down">{item[`content_${lan}`]}</p>*/}
-                           
+
 
                         </div>
                     </div>
