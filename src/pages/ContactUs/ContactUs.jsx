@@ -55,7 +55,7 @@ const ContactUs = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <a href="https://www.instagram.com/easyprzeprowadski.pl/" target="_blank"
+                                <a href="https://www.instagram.com/easy_przeprowadzki_pl?igsh=aGQyMDFiaWV5cHp6&utm_source=qr" target="_blank"
                                    className="contact_col-55_information_gets">{t("queto")}</a>
                             </div>
                             <div className="contact_col-55_information">

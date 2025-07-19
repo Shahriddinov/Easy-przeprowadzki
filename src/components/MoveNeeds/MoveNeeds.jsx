@@ -18,7 +18,6 @@ const MoveNeeds = () => {
     }, []);
     return (
         <div className="moveNeeds">
-
             <div className="moveNeeds_bgc">
                 <FaCaretDown className="moveNeeds_bgc_downIcon"/>
                 <div className="bigTitle moveNeeds_bgc_centerTitle" data-aos="fade-down">{t("need")}

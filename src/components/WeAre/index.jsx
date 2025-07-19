@@ -51,7 +51,7 @@ const WeAre = () => {
 
                         </div>
                         <div className="weAre_col-6">
-                             {item[`benifits_${lan}`].map((item, index) => (
+                             {item[`benifits_${lan}`]?.map((item, index) => (
                                 <ul className="weAre_col-6_elItem" data-aos="fade-left" key={index}>
                                     <li className="weAre_col-6_elItem_iconList">
                                         <IoCheckbox className="weAre_col-6_elItem_iconList_check"/>
@@ -66,7 +66,7 @@ const WeAre = () => {
                             {/*       data-aos="fade-up">{item[`quote_${lan}`]}</p>*/}
                             {/*</div>*/}
                             {/*<p className="weAre_col-6_ps" data-aos="fade-down">{item[`content_${lan}`]}</p>*/}
-                           
+
 
                         </div>
                     </div>

@@ -101,7 +101,7 @@
     }
   }
   @media (max-width: 768px) {
-    height: 65vh;
+    height: 100vh;
 
     &_desc {
       top: 60%;
@@ -110,7 +110,7 @@
     &_carousel {
       &_wrapper {
         &_picture {
-          height: 65vh;
+          height: 100vh;
           object-fit: cover;
         }
       }
