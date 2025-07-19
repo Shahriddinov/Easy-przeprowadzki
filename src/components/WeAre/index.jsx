@@ -1,8 +1,6 @@
 import React, {useEffect} from 'react';
 import "./style.scss";
-import weImg1 from "../../assets/images/we1.jpg";
-import weImg2 from "../../assets/images/we2.jpg";
-import weImg3 from "../../assets/images/we3.jpg";
+
 import {IoCheckbox} from "react-icons/io5";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -61,12 +59,6 @@ const WeAre = () => {
                             ))}
                             <h2 className="headTitle" data-aos="fade-left">{t("who")}</h2>
                             <h3 className="bigTitles">{item[`content_${lan}`]}</h3>
-                            {/*<div className="weAre_col-6_elementor">*/}
-                            {/*    <p className="weAre_col-6_elementor_littileText"*/}
-                            {/*       data-aos="fade-up">{item[`quote_${lan}`]}</p>*/}
-                            {/*</div>*/}
-                            {/*<p className="weAre_col-6_ps" data-aos="fade-down">{item[`content_${lan}`]}</p>*/}
-
 
                         </div>
                     </div>
